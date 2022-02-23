@@ -1,0 +1,102 @@
+\documentclass[12pt,spanish,fleqn,openany,letterpaper,pagesize]{book}
+
+
+\newpage
+
+\input{codigofuente/preambulo}
+%
+\makeatletter
+\let\ps@plain\ps@empty
+\makeatother
+%
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyhead{}
+\fancyhead[L]{\scriptsize \leftmark}
+\fancyhead[R]{\scriptsize \rightmark}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.8pt}
+
+
+
+\begin{document}
+\frontmatter
+
+
+\begin{titlepage}
+\centering
+\begin{center}
+\includegraphics[scale=0.23]{USAlogo.jpg}
+\end{center}
+\vspace{2cm}
+{\scshape\Huge Estudio de la correlación de contaminantes del aire de Bogotá. \par}
+\vspace{2cm}
+{\Large Autor: \par}
+{\Large Michael Stiven Pinzón Rodríguez. \par}
+
+
+
+\vspace{2cm}
+{\itshape\Large Universidad Sergio Arboleda \par} 
+Facultad de ciencias exactas e ingeniería\\
+Maestría en Matemáticas Aplicadas
+\vfill
+
+\vfill
+{\Large Bogotá D.C - 2022 \par}
+ \end{titlepage}
+\newpage
+
+\newpage
+
+\begin{titlepage}
+\centering
+\begin{center}
+\includegraphics[scale=0.23]{USAlogo.jpg}
+\end{center}
+\vspace{1cm}
+{\scshape\Huge Estudio de la correlación de contaminantes del aire de Bogotá. \par}
+\vspace{1cm}
+{\Large Autor: \par}
+{\Large Michael Stiven Pinzón Rodríguez. \par}
+
+\vspace{1cm}
+{\Large Tutora: \par}
+{\Large Biviana Marcela Suárez Sierra. \par}
+\vspace{1cm}
+{\itshape\Large Tesis de grado presentada como requisito parcial para optar al título de: \par} 
+{\itshape\Large \textbf{Magister en Matemáticas Aplicadas} \par} 
+\vspace{1cm}
+{\itshape\Large Universidad Sergio Arboleda \par} 
+Facultad de ciencias exactas e ingeniería\\
+Maestría en Matemáticas Aplicadas
+\vfill
+
+\vfill
+{\Large Bogotá D.C - 2022 \par}
+ \end{titlepage}
+
+
+\include{codigofuente/agradecimientos}
+
+\renewcommand{\contentsname}{Contenido}
+\tableofcontents
+
+\mainmatter
+
+\include{codigofuente/antecedentes}
+\include{codigofuente/capitulo1}
+
+\include{codigofuente/diagnosticoconvergencia}
+
+
+\input{codigofuente/bibliografia}
+
+\end{document}
+
+
+
+
+
+
+\end{document}

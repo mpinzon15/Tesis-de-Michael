@@ -1,0 +1,248 @@
+\chapter{Recolección de datos} 
+
+Para el estudio de la correlación de los contaminantes del aire de Bogotá, se trabajará con las concentraciones de 1096 días, correspondientes a los años 2018 a 2020, de material particulado de 10 micrómetros de tamaño, $PM 10$, material particulado de 2.5 micrómetros de tamaño, $PM 2.5$ y Ozono, $O_3$. 
+
+
+Para el correspondiente análisis, es necesario estudiar la reglamentación establecida por el ministerio de ambiente y desarrollo sostenible de Colombia, el cual, en la resolución N° $2254$ del 1 de noviembre de 2017: \textit{Por la cual se adopta la norma del aire y se dictan otras disposiciones,} establece que a partir del 1 de julio del 2018 los niveles máximos permisibles de contaminantes criterio en el aire son los que se presentan en la tabla \ref{nivelesperm}:
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Contaminante & Nivel máximo permisible \\
+\hline \hline
+$PM_{10}$ &$ 75\mu g /m^3$ \\ \hline
+$PM_{2.5}$ & $ 37 \mu g /m^3$  \\ \hline
+$0_3$ & $100 ppb$ \\\hline
+\end{tabular}
+\caption{Normativa establecida en la resolución $2254$ para cada uno de los tres contaminantes.}
+\label{nivelesperm}
+\end{center}
+\end{table}
+
+Estos 1096 datos diarios de los tres contaminantes, fueron obtenidos a partir de los datos horarios registrados en las 13 estaciones de monitoreo de calidad del aire de Bogotá. Para el caso del $PM_{10}$ y $PM_{2.5}$ se determinaron promedios por cada 24 horas y de estos promedios se elegía el valor máximo; para el caso del $O_3$, algo similar, solo que, en lugar de promedio se tomo el máximo de cada periodo de un día. 
+
+A continuación, se verifica mediante el software R, la cantidad de veces que estos umbrales se rebasan en los 1096 días de los años 2018 a 2020, en la figura \ref{seriesdet} se muestran las series de tiempo que describen el comportamiento diario de los contaminantes durante los tres años analizados.
+
+Para el caso del PM 10, sucede algo particular y es que sus valores máximo y mínimo suceden en el mismo mes, aquí se observa que el día 24 de junio del 2020, se presentó una medición de $172.37$, sobrepasando considerablemente el máximo permitido y para el día 15 de junio del mismo año, se obtuvo una medición mínima en los tres años de $14.06$. Para este contaminante, se observaron un total de $318$ rebases.
+
+En cuanto al material particulado $PM_{2.5}$ se observó que este rebasaba los umbrales permitidos un $30,3\%$ de veces, con un total de $332$ días en los que la norma no se esta cumpliendo, se puede observar en la figura \ref{seriesdet} que el día 28 de marzo del 2019, este contaminante sobrepasó el umbral permitido en más del $200\%$. 
+
+
+
+
+Para la serie de tiempo que muestra los máximos diarios de concentración de Ozono en la ciudad de Bogotá, se debe tener en cuenta que, en la resolución número $2254$ del ministerio de ambiente y desarrollo sostenible, se presenta el umbral de este contaminante medido en $\mu g / m^3$ y en las estaciones de monitoreo se recibe la información en partes por billón $(ppb)$, de manera que se debe realizar la revisión de rebases, cuando los datos recogidos superen el valor aproximado de $50,9375 \text{ } ppb$ que corresponde a los $100 \mu g / m^3$ que establece la norma, esto nos da un total de 219 rebases en los tres años analizados. 
+
+
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=1.5]{seriesdetiempo}
+\end{center}
+\centering
+\caption{Niveles de concentración diaria de contaminantes $O_3$, $PM_{10}$ y $PM_{2.5}$, la recta horizontal representa el umbral máximo permitido por las autoridades ambientales en Colombia.}
+\label{seriesdet}
+\end{figure}
+
+En la tabla \ref{rebasesporcontaminante} se muestra un resumen de los rebases obtenidos para cada uno de los contaminantes de interés, teniendo en cuenta que para el $O_3$ los rebases se determinaron sobre un valor de $50.93$ luego de realizar la respectiva conversión de partes por billón a $\mu g/m^3$. 
+
+En la figura \ref{mediasacum} se presentan los graficos de las medias acumuladas de los rebases de los umbrales máximos permitidos. En ellos se puede evidenciar que hubo meses en los cuales no se presentaron rebases, esto se observa cuando las gráficas se muestran como una constante, un ejemplo es el caso del Ozono, en los meses comprendidos entre marzo y julio de 2018, no hubo ni un solo rebase, así como también entre los meses de abril y agosto del año 2019. De esta misma manera ocurre con los otros dos contaminantes, sin embargo es el Ozono, en el cual los periodos en los que no se rebasan los umbrales son mas extensos. 
+
+
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Contaminante & Umbral & Rebases & Porcentaje \\
+\hline \hline
+$PM_{10}$ & $70\mu g /m^3$ &  318  & $29\%$ \\ \hline
+$0_3$& $100 ppb$ &  219 & $20\%$  \\ \hline
+$PM_{2.5}$ & $37\mu g /m^3$ & 332 & $30.3 \%$  \\ \hline
+\end{tabular}
+\caption{Número de rebases de cada contaminante.}
+\label{rebasesporcontaminante}
+\end{center}
+\end{table}
+
+
+ 
+\begin{figure}[!t]
+\begin{center}
+\includegraphics[scale=1.5]{mediasacumuladas}
+\end{center}
+\centering
+\caption{Media acumulada observada del número de excedencias para cada uno de los tres contaminantes.}
+\label{mediasacum}
+\end{figure}
+
+Para estudiar el número de rebases de los umbrales ambientales, se considera un proceso de Poisson con función de intensidad $\lambda (t),$ con la forma Weibull, que depende de los parámetros $\a$ y $\b$ de acuerdo con la siguiente expresión: 
+
+$$\lambda(t)=\frac{\a}{\b}\left(\frac{t}{\b}   \right)^{\a -1}, \a, \b >0 \text{ y } t \geq 0 $$ 
+
+A partir de esta expresión se construyen las funciones de riesgo para cada uno de los modelos, teniendo en cuenta que cuando el parámetro $\a<1$ la función es decreciente, si $\a>1$  será creciente y constante cuando $\a=1$
+
+\section{Sin puntos de cambio}
+
+Para estimar los parámetros de este modelo, se realizaron $20.000$ iteraciones y se eliminaron $2.000$ de ellas. En esta implementación se encontró que para el $PM_{10}$, los parámetros son $\a=1.02$ y $\b=3.87$, lo cual indica que la función de riesgo será creciente, esto lo que quiere decir, es que el número de rebases tiende a aumentar con el paso del tiempo. 
+
+Para el caso del $PM_{2.5}$, se obtuvo: $\a=1.16$ y $\b=1.75$ y para el ozono, $\a=1.21$ y $\b=13.37$, estos últimos valores de $\a$ demuestran que las funciones también son crecientes, de manera que con el paso del tiempo los niveles de contaminación de $PM_{2.5}$ y $O_3$ aumentarán.  
+
+En ausencia de puntos de cambio, se determinaron los siguientes parámetros $\a$  y  $\b$ con los cuales se podrán construir las funciones de riesgo acumuladas: 
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+& \multicolumn{5}{c|}{Información estadística} \\
+\cline{2-6}
+& Parámetros & dist. inicial  & Media & sd  &   intervalo $95 \%$\\
+\hline \hline
+\multirow{2}{1.5cm}{$PM_{10}$} & $\a_1$ & $unif(1,3)$ & $1.02$ & $0.01$ & $(1.00;1.06)$ \\ \cline{2-6}
+& $\b_1$& $unif(1,10)$ & $3.87$ & $0.45$ & $(3.25;4.99)$\\  \cline{1-6}
+\multirow{2}{1.5cm}{$PM_{2.5}$} & $\a_1$ & $dunif(1,2.5)$& $1.16$ & $0.03$ & $(1.12;1.24)$\\ \cline{2-6}
+& $\b_1$ & \multicolumn{1}{c|}{$dunif(6.3;78.5)$} & $1.75$ & $0.42$ & $(6.43;10.13)$\\ \cline{1-6}
+\multirow{2}{1.5cm}{$O_3$} & $\a_1$ & $dunif(1,5.99)$ & $1.21$& $0.03$ & $(1.16;1.29)$\\ \cline{2-6}
+&$\b_1$ & \multicolumn{1}{c|}{$dunif(11.9,141)$} & $13.37$ & $1.41$ & $(11.94;17.12)$\\ \cline{1-6}
+\end{tabular}
+\caption{Información estadística de cada modelo sin puntos de cambio.}
+\label{infoestad}
+\end{table}
+
+
+
+Teniendo estos parámetros,en la figura \ref{riesgo} se presentan las diferentes funciones de riesgo $\lambda (t)$ para cada uno de los tres contaminantes, esto sin tener en cuenta algún punto de cambio. 
+
+
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=15cm]{rate_function_spdc}
+\end{center}
+\centering
+\caption{ Función de riesgo $\lambda (t) $, estimada para el modelo en ausencia de puntos de cambio.  }
+\label{riesgo}
+\end{figure}
+
+
+El comportamiento de los rebases de cada contaminante se puede observar a través de la función de media acumulada $m(t)$, observada y estimada. En nuestro caso se observa en la figura  \ref{mediasacumcomp}, la función de media acumulada estimada en color azul, frente a lo estimado con un intervalo de confianza del $95\%$ de credibilidad, lo cual se representa mediante las lineas verdes, buscando hacer un ajuste y contraste con lo observado, que se presenta de color negro.
+
+
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=13cm]{spdc_means}
+\end{center}
+\centering
+\caption{ Función de media acumulada (azul), junto con los intervalos de confianza estimados con un 95\% de confianza (verde) y los datos observados (negro).  }
+\label{mediasacumcomp}
+\end{figure}
+
+
+
+Se puede observar, que para el caso del $PM_{10}$, el modelo inicia con un buen ajuste, sin embargo para los meses posteriores a enero del 2019, se ve un desajuste considerable. Caso contrario el del $PM_{2.5}$ cuya estimación no es favorable en la mayoría de los meses estudiados, al igual que en el caso del ozono, en el cual se ve un buen ajuste durante los tres primeros meses y durante el mes de abril del año 2020. 
+
+
+
+\newpage
+
+
+\section{Un punto de cambio}
+ 
+
+Este primer punto se encontró gráficamente, observando cambios en la figura \ref{mediasacum}, e identificando acontecimientos sucedidos en las fechas donde se observan dichos cambios. Estos puntos pueden ser aproximadamente los siguientes: 
+$\tau_1=380$, $\tau_2=415$ y $\tau_3=115$, para $PM_{10}$, $PM_{2.5}$ y $O_3$ respectivamente.  
+
+
+
+Para estos modelos se tendrán en cuenta dos tramos de las gráficas de medias acumuladas, que estarán determinados por el punto de cambio elegido. Es decir que antes de cada punto de cambio se determinarán un $\a$ y un $\b$ y para después del punto de cambio, otros $\a$ y $\b$ diferentes. Estos modelos se presentan en la figura \ref{mediasacumupc}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=12cm]{means_updc}
+\end{center}
+\centering
+\caption{ Función de media acumulada (azul), junto con los intervalos de confianza estimados con un 95\% de confianza (verde) y los datos observados (negro), para un punto de cambio.  }
+\label{mediasacumupc}
+\end{figure}
+
+
+Los parámetros estimados para este modelo, fueron obtenidos realizando 20.000 iteraciones, al igual que en sin un punto de cambio. Se observa aquí que los parámetros $\a$ para el contaminante $PM_{10}$ fueron mayores que $1$, lo que indica que el comportamiento del contaminante, tiende a  aumentar su concentración con el paso del tiempo. De la misma forma, para los contaminantes  $PM_{2.5}$ y $O_3$ ambos parámetros son mayores que $1$, de manera que, así como se observó en el modelo sin puntos de cambio, antes y después del punto establecido, los contaminantes mantienen la predicción de aumento con el paso del tiempo. Estos resultados se encuentran resumidos en la tabla \ref{infoestadupc} y la gráfica correspondiente a las funciones de riesgo se muestran en la figura 
+ 
+
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|c|l|l|l|l|}
+\hline
+& \multicolumn{5}{c|}{Información estadística} \\
+\cline{2-6}
+& Parámetros & dist. inicial  & Media & sd  &   intervalo $95 \%$\\
+\hline \hline
+\multirow{5}{1.5cm}{$PM_{10}$} & $\tau_1$ & $dunif(350,450))$ & $318.94$ & $ 17.86 $ & $(284.70;354.50)$ \\ \cline{2-6}
+& $\a_1$& $dunif(1, 3)$ & $1.09$ & $0.06$ & $(1.00;1.23)$\\  \cline{2-6}
+& $\b_1$& $dunif(1,100)$ & $316.30$ & $17.61$ & $(282.86;351.89)$\\  \cline{2-6}
+& $\a_2$& $dunif(1,3)$ & $2.02$ & $0.11$ & $(1.74; 2.17)$\\  \cline{2-6}
+& $\b_2$& $dunif(1,100)$ & $316.61$ & $17.63 $ & $(283.16;352.24)$\\  \cline{1-6}
+\multirow{5}{1.5cm}{$PM_{2.5}$} & $\tau_1$ & $dunif(350,500)$& $483.53$ & $9.44$ & $(465.86;498.37)$\\ \cline{2-6}
+& $\a_1$& $dunif(1,2.5)$ & $1.45$ & $0.11$ & $(1.25;1.68)$\\  \cline{2-6}
+& $\b_1$& $dunif(6.4, 78.5)$ & $14.90$ & $4.04$ & $(8.19;23.72)$\\  \cline{2-6}
+& $\a_2$& $dunif(1,2.5))$ & $1.28$ & $0.15$ & $(1.10;1.65)$\\  \cline{2-6}
+& $\b_2$& $dunif(6.4, 78.5)$ & $15.21$ & $9.15$ & $(6.58;41.13)$\\  \cline{1-6}
+\multirow{5}{1.5cm}{$O_3$} & $\tau_1$ & $dunif(50,200)$ & $49.70$& $14.52$ & $(23.24;82.00)$\\ \cline{2-6}
+& $\a_1$& $dunif(1, 5.9)$ & $1.83$ & $0.17$ & $(1.57;2.24)$\\  \cline{2-6}
+& $\b_1$& $dunif(11.9, 141)$ & $212.85$ & $14.48$ & $(185.59;242.55)$\\  \cline{2-6}
+& $\a_2$& $dunif(1, 5.9)$ & $1.67$ & $0.16$ & $(1.36;2.00)$\\  \cline{2-6}
+& $\b_2$& $dunif(11.9, 141)$ & $14.59$ & $2.29$ & $(11.98;20.36)$\\  \cline{1-6}
+\end{tabular}
+\caption{Información estadística de cada modelo con un  punto de cambio.}
+\label{infoestadupc}
+\end{table}
+
+
+\begin{figure}[hbt!]
+\begin{center}
+\includegraphics[width=13cm]{Rate_function_upc}
+\end{center}
+\centering
+\caption{ Función de riesgo $\lambda (t)$, estimada para el modelo construido bajo un punto de cambio.   }
+\label{rate_upc}
+\end{figure}
+
+
+\section{Dos puntos de cambio:}
+
+\section{Política pública:}
+
+Como ya se mencionó, los puntos de cambio de los modelos construidos se determinaron principalmente con ayuda de las gráficas de las medias acumuladas de cada uno de los contaminantes, para justificar estos puntos, una estrategia es identificar algunas de las estrategias del gobierno nacional para mitigar la contaminación ambiental durante estas fechas.
+Uno de los insumos mas importantes que permite identificar esto, es el \textit{plan decenal de desconaminación del aire de Bogotá} que elabora cada 10 años y al cual se le realizan revisiones periódicas para verificar su alcance y cumplimiento. 
+El documento que compete a esta investigación, es el elaborado para la década del 2010 al 2020 \cite{plandecenal}, en el cual, al igual que en la anterior década, se centran en la implementación de las siguientes acciones para mejorar la calidad del aire 
+
+\begin{itemize}
+\item Pico y placa ambiental.
+\item Pico y placa de movilidad. 
+\item Mejoramiento del ACPM.
+\item Operativos en Vía.
+\item Control a fuentes industriales.
+\item Inventarios de emisiones. 
+\end{itemize}
+
+Estas acciones, se organizaron para ser implementadas durante los 10 años, para el caso del periodo de tiempo que se esta teniendo en cuenta en el presente documento, las acciones planteadas son, para el 2019 y 2020 únicamente, en el sector industrial, se estableció el proyecto \textit{Uso de sistemas de control
+de emisiones}, para los años 2012 al 2020, en cuestiones de transporte, se debían implementar los proyectos \textit{Uso de sistemas de control de emisiones en vehículos de transporte de carga}, y \textit{Uso de sistemas de control 
+de emisiones en motocicletas} y para el periodo comprendido entre 2011 y 2020 el proyecto \textit{Implementación del sistema
+integrado de transporte
+público}. 
+Buscando que, de acuerdo con las proyecciones y con los proyectos establecidos, la tendencia de contaminación del material particulado, por ejemplo, muestre el comportamiento mostrado en la figura \ref{proyeccionplandecenal}
+
+\begin{figure}[hbt!]
+\begin{center}
+\includegraphics[width=13cm]{proyeccionplandecenal}
+\end{center}
+\centering
+\caption{ Emisiones de material particulado entre 2008 y 2020, en los escenarios de tendencia versus el plan de descontaminación, tomado del plan decenal de descontaminación del aire de Bogotá \cite{plandecenal}. }
+\label{proyeccionplandecenal}
+\end{figure}
+
+En la ciudad de Bogotá, se han reducido los niveles de concentración de $PM_{10}$ y $PM_{2.5}$ entre los años de 2012 y 2017 gracias a las propuestas implementadas en el plan decenal de decontaminación del aire para Bogotá, como por ejemplo la integración del transporte público SITP y la descontinuación de algunas busetas que no cumplían con las características establecidas para contrarrestar la contaminación; el seguimiento y control en la industria, aumento en los días sin carro, entre otras.
+Puntualmente, para el caso del $PM_{10}$ y el $PM_{2.5}$ su primer punto de cambio ocurre al rededor del dato 400, el cual corresponde a una fecha aproximada al 4 de febrero del 2019, este cambio se puede explicar en parte, por la resolución 383 del año 2019 \cite{res2019}, en la cual se declara alerta amarilla porque el material particulado excede los umbrales máximos permitidos. Así mismo, para el caso del Ozono, sucede algo similar solo que su primer punto de cambio ocurre en marzo del 2018, cuando en la resolución 831 de 2018 \cite{res2018} también es decretada la alerta amarilla por contaminación ambiental y se establecen algunas restricciones en la ciudad de Bogotá, como por ejemplo establecer  restricciones en el sector de transporte y movilidad y restringir la operaciones de fuentes fijas industriales que operan con combustibles sólidos y líquidos. 
+
+ 

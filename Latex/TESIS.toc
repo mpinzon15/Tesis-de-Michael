@@ -1,0 +1,11 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Antecedentes}{1}{}%
+\contentsline {subsection}{\numberline {1.0.1}Función de máxima verosimilitud.}{1}{}%
+\contentsline {chapter}{\numberline {2}Recolección de datos}{2}{}%
+\contentsline {section}{\numberline {2.1}Sin puntos de cambio}{5}{}%
+\contentsline {section}{\numberline {2.2}Un punto de cambio}{8}{}%
+\contentsline {section}{\numberline {2.3}Dos puntos de cambio:}{10}{}%
+\contentsline {section}{\numberline {2.4}Política pública:}{10}{}%
+\contentsline {section}{\numberline {2.5}Diagnóstico de convergencias}{14}{}%
+\contentsline {subsection}{\numberline {2.5.1}Sin puntos de cambio}{14}{}%
+\contentsline {subsection}{\numberline {2.5.2}Un punto de cambio}{15}{}%

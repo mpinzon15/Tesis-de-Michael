@@ -1,0 +1,309 @@
+\section{Diagnóstico de convergencias}
+
+\subsection{Sin puntos de cambio}
+De acuerdo a las simulaciones generadas para cada modelo, se realizaron los análisis de convergencia correspondientes obteniendo resultados favorables que indican que el modelo muestra buenos resultados pues los parámetros cumplen la mayoría de los criterios, esto se muestra en las tablas \ref{converpm10spc}, \ref{converpm25spc} y 
+\ref{converozono}. 
+
+En todos los casos, para el criterio de convergencia propuesto en Geweke (1992), se observa que cada una de las pruebas aplicadas a las cinco cadenas realizadas, satisface la condición de que el valor $Z$ calculado, se encuentre entre el intervalo $(-2,2)$ esto da un buen indicio sobre la convergencia de los parámetros. 
+
+Por otra parte, el criterio Heidelberg-Welch de estacionalidad fue  satisfactoria para todas las cadenas, por lo cual se identifica si el ancho medio para cada una de ellas es menor que $\varepsilon =0.1 $, y esto, en efecto es cierto en todas las cadenas realizadas para los tres contaminantes. 
+
+Y finalmente el criterio de Gelman Rubin, menciona que valores cercanos a 1, indicarían una posible convergencia y en cada uno de los tres contaminantes su valor fue cercano a 1. De esta manera, cumpliendo la mayoría de condiciones de cada uno de los criterios de convergencia estudiados, se puede afirmar con seguridad que los parámetros estimados  funcionan adecuadamente. 
+
+
+%%SPC-CONVERGENCIA-PM10
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|c|l|l|l|l|l|}
+\hline
+& \multicolumn{6}{|c|}{Diagnóstico de convergencia} \\
+\cline{2-7}
+& Parámetro & cadena 1  & cadena 2  & cadena 3 & cadena 4 & cadena 5	 \\
+\hline \hline
+\multirow{2}{2.5cm}{Geweke} & $\a$ & $0.7131$ & $-0.18966$ & $0.5049$ & $-0.3310$  & $-0.3435$\\ \cline{2-7}
+& $\s$& $0.7133$ & $-0.05731$ & $0.4922$ & $-0.4261$ & $-0.3172$\\
+  \cline{1-7}
+\multirow{2}{2.5cm}{Raftery - Lewis} & $\a$ & $1.35$& $ 1.28$ & $2.07$ & $1.26 $ & $  1.31 $\\ \cline{2-7}
+& $\s$ & \multicolumn{1}{l|}{$1.51$} & $2.61$ & $1.70$ & $2.38 $ & $1.58$ \\ \cline{1-7}
+\multirow{2}{2.5cm}{H-W Estacionalidad} & $\a$ & $0.877$ & $0.642$ & $0.903$ & $0.916$ & $0.680$ \\ \cline{2-7}
+&$\s$ & \multicolumn{1}{l|}{$0.890$} & $0.598$ &  $ 0.826$ & $0.984$ & $0.747 $ \\ \cline{1-7}
+\multirow{2}{2.5cm}{H-W $1/2$ Ancho} & $\a$ & $0.00107$ & $ 0.00106$ & $ 0.00112$ & $0.000986 $  & $ 0.000891  $  \\ \cline{2-7}
+&$\s$ & \multicolumn{1}{l|}{$0.02705  $} & $0.02698$ & $0.02746  $ & $0.024899$ & $0.022256$ \\ \cline{1-7}
+
+\multirow{2}{2.5cm}{Gelman - Rubin} & $\a$ & \multicolumn{5}{|c|}{1.00}\\ \cline{2-7}
+&$\s$ &  \multicolumn{5}{|c|}{1.00} \\ \cline{1-7}
+
+
+
+\end{tabular}
+\caption{Información de convergencia para el modelo $PM_{10}$, sin puntos de cambio. H-W=Heidelberger-Welch}
+
+\label{converpm10spc}
+\end{table}
+
+
+
+
+
+%%SPC-CONVERGENCIA-PM25
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|c|l|l|l|l|l|}
+\hline
+& \multicolumn{6}{|c|}{Diagnóstico de convergencia} \\
+\cline{2-7}
+& Parámetro & cadena 1  & cadena 2  & cadena 3 & cadena 4 & cadena 5	 \\
+\hline \hline
+\multirow{2}{2.5cm}{Geweke} & $\a$ & $0.0959$ & $0.5630$ & $-1.785$ & $-1.455$  & $ -0.2081$\\ \cline{2-7}
+& $\s$& $0.1362$ & $0.4231$ & $-1.836$ & $-1.423 $ & $-0.1948$\\
+  \cline{1-7}
+\multirow{2}{2.5cm}{Raftery - Lewis} & $\a$ & $2.51 $& $  1.85$ & $2.50$ & $2.56  $ & $  2.56  $\\ \cline{2-7}
+& $\s$ & \multicolumn{1}{l|}{$ 2.13$} & $2.41$ & $2.43$ & $2.29	 $ & $2.34  $ \\ \cline{1-7}
+\multirow{2}{2.5cm}{H-W Estacionalidad} & $\a$ & $0.229  $ & $0.764 $ & $0.795$ & $0.484$ & $0.0534$ \\ \cline{2-7}
+&$\s$ & \multicolumn{1}{l|}{$0.308 $} & $  0.507$ &  $ 0.776 $ & $ 0.474$ & $ 0.8327 $ \\ \cline{1-7}
+\multirow{2}{2.5cm}{H-W $1/2$ Ancho} & $\a$ & $0.00291$ & $0.00253$ & $0.00253$ & $0.00232 $  & $0.00246 $  \\ \cline{2-7}
+&$\s$ & \multicolumn{1}{l|}{$0.09838  $} & $0.08906$ & $0.08830 $ & $ 0.07683$ & $0.07932 $ \\ \cline{1-7}
+
+\multirow{2}{2.5cm}{Gelman - Rubin} & $\a$ & \multicolumn{5}{|c|}{1}\\ \cline{2-7}
+&$\s$ &  \multicolumn{5}{|c|}{1} \\ \cline{1-7}
+
+
+
+\end{tabular}
+\caption{Información de convergencia para el modelo $PM_{2.5}$, sin puntos de cambio. H-W=Heidelberger-Welch}
+
+\label{converpm25spc}
+\end{table}
+
+
+
+
+%%SPC-CONVERGENCIA-Ozono
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|c|l|l|l|l|l|}
+\hline
+& \multicolumn{6}{|c|}{Diagnóstico de convergencia} \\
+\cline{2-7}
+& Parámetro & cadena 1  & cadena 2  & cadena 3 & cadena 4 & cadena 5	 \\
+\hline \hline
+\multirow{2}{2.5cm}{Geweke} & $\a$ & $0.7882$ & $0.2856 $ & $0.7351$ & $0.9028$  & $ -0.07696$\\ \cline{2-7}
+& $\s$& $0.7052 $ & $0.2041$ & $0.9396$ & $0.8609$ & $-0.14975$\\
+  \cline{1-7}
+\multirow{2}{2.5cm}{Raftery - Lewis} & $\a$ & $ 1.72  $& $  1.67$ & $ 2.40$ & $1.94 $ & $ 1.80 $\\ \cline{2-7}
+& $\s$ & \multicolumn{1}{l|}{$1.31$} & $1.26$ & $ 1.34 $ & $1.22 $ & $1.25$ \\ \cline{1-7}
+\multirow{2}{2.5cm}{H-W Estacionalidad} & $\a$ & $0.408$ & $0.907 $ & $0.234$ & $ 0.351$ & $0.273$ \\ \cline{2-7}
+&$\s$ & \multicolumn{1}{l|}{$0.4185$} & $ 0.924$ &  $ 0.113  $ & $0.374$ & $ 0.335  $ \\ \cline{1-7}
+\multirow{2}{2.5cm}{H-W $1/2$ Ancho} & $\a$ & $0.00139$ & $0.00172$ & $0.00163$ & $0.0018 $  & $0.00151$  \\ \cline{2-7}
+&$\s$ & \multicolumn{1}{l|}{$0.06699 $} & $0.08421$ & $0.07863$ & $ 0.0883$ & $0.07574 $ \\ \cline{1-7}
+
+\multirow{2}{2.5cm}{Gelman - Rubin} & $\a$ & \multicolumn{5}{|c|}{1}\\ \cline{2-7}
+&$\s$ &  \multicolumn{5}{|c|}{1.01} \\ \cline{1-7}
+
+
+
+\end{tabular}
+\caption{Información de convergencia para el modelo $O_3$, sin puntos de cambio. H-W=Heidelberger-Welch}
+\label{converozono}
+\end{table}
+
+\subsection{Un punto de cambio}
+
+El diagnóstico de convergencia para un punto de cambio, arrojó algunos resultados importantes que se deben mencionar. Iniciando con el criterio de Geweke (1992), este es satisfactorio en las cinco cadenas realizadas para el material particulado de $10\mu m$ de tamaño pues la comparación de los valores de las medias iniciales y finales de las cadenas, están entre -2 y 2. Para el caso del $PM_{2.5}$ se observa en la tabla \ref{convergencia_updc_pm25} que en algunas de las cadenas los valores no se encuentran entre -2 y 2, es el caso de los parámetros $\a_2$ y $\s_2$, en los cuales en dos y tres de las cadenas, respectivamente, los resultados se encuentran fuera del intervalo que se considera adecuado, sin embargo, estos números no son significativamente grandes. Para el caso del $O_3$ sucede lo mismo que en el $PM_{10}$ pues todos sus valores se encuentran dentro del intervalo que genera confianza, para poder hablar de estacionalidad y posiblemente de convergencia. 
+
+Otro de los criterios que proporciona información sobre la convergencia de los parámetros es el test de estacionalidad de Heidelberger-Welch, pues los tres contaminantes lo pasaron, de manera que se procede a hacer la revisión del criterio del Ancho medio, el cual es satisfactorio para todos los parámetros $\a_1$ y $\a_2$ de los tres contaminantes, a excepción de una cadena del contaminante Ozono, sin embargo al ser solo una de cinco cadenas, no se tiene en cuenta, de forma que todos los parámetros $a_1$ y $a_2$ tienen una confirmación más de que tienen convergencia. Para el caso de los parámetros $\s_1$ y $\s_2$ este criterio, muestra que en algunas cadenas, sus valores no son menores a $0.1$, por tanto este criterio no es suficiente o de apoyo para argumentar convergencia de ellos, de forma similar con el parámetro $\tau$ en el caso de los tres contaminantes. 
+
+
+Finalmente, para el caso de los modelos con un solo punto de cambio, se observó que el criterio Gelman- Rubin, es satisfactorio en los tres modelos, pues sus valores son cercanos a 1, toda la información anterior, se encuentra resumida en las tablas \ref{convergencia_updc_pm10}, \ref{convergencia_updc_pm25} y \ref{convergencia_updc_ozono}.
+
+
+%%%%%TABLA DE CONV UPDC PM10
+
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|c|l|l|l|l|l|}
+\hline
+& \multicolumn{6}{|c|}{Diagnóstico de convergencia} \\
+\cline{2-7}
+& Parámetro & cadena 1  & cadena 2  & cadena 3 & cadena 4 & cadena 5	 \\
+\hline \hline
+\multirow{5}{2.5cm}{Geweke} & $\a_1$ & $-0.2161$ & $-0.3797$ & $0.8125 $ & $-0.6749$  & $ 1.4716$\\ \cline{2-7}
+& $\s_1$& $-0.2583 $ & $-0.3447$ & $0.8189$ & $-0.6263$ & $ 1.5856$\\
+\cline{2-7}
+& $\a_2$& $-0.3066 $ & $-0.1314 $ & $-1.1402$ & $ -0.4315$ & $1.0628$\\
+\cline{2-7}
+& $\s_2$& $-0.3165 $ & $0.1059$ & $-1.1862$ & $ -0.4369$ & $1.0672$\\
+\cline{2-7}
+& $\tau $& $-1.8701 $ & $-0.6091$ & $-1.4073$ & $0.1858$ & $-0.7393$\\
+  \cline{1-7}
+  \multirow{5}{2.5cm}{Raftery - Lewis} & $\a_1$ & $4.49$ & $5.25  $ & $2.88 $ & $2.67$  & $ 2.83 $\\ \cline{2-7}
+& $\s_1$& $3.64 $ & $3.41 $ & $3.51$ & $3.01$ & $36.30 $\\
+\cline{2-7}
+& $\a_2$ & $18.60  $ & $30.10 $ & $13.60$ & $27.40$ & $4.69$\\
+\cline{2-7}
+& $\s_2$& $19.00 $ & $28.50$ & $13.80$ & $29.10 $ & $44.70$\\
+\cline{2-7}
+& $\tau $& $5.81 $ & $6.90$ & $6.85$ & $6.32 $ & $5.95$\\
+  \cline{1-7}
+  \multirow{5}{2.5cm}{H-W Estacionalidad} & $\a_1$ & $0.5609$ & $0.986 $ & $ 0.193$ & $0.186$  & $0.996$\\ \cline{2-7}
+& $\s_1$& $0.5359  $ & $0.983   $ & $0.259$ & $0.212$ & $0.995$\\
+\cline{2-7}
+& $\a_2$& $0.0573 $ & $0.509$ & $0.651$ & $0.122$ & $0.653$\\
+\cline{2-7}
+& $\s_2$& $0.0973 $ & $0.593 $ & $0.639$ & $0.125$ & $0.646$\\
+\cline{2-7}
+& $\tau$& $0.4983 $ & $0.637 $ & $0.645$ & $0.327$ & $0.384$\\
+  \cline{1-7}
+  \multirow{5}{2.5cm}{H-W $1/2$ Ancho} & $\a_1$ & $0.00642$ & $0.00547 $ & $0.00679$ & $0.00705$  & $ 0.00758$\\ \cline{2-7}
+& $\s_1$& $0.12170 $ & $0.10158$ & $0.12922$ & $0.13551$ & $0.14583$\\
+\cline{2-7}
+& $\a_2$& $0.01301 $ & $0.01932$ & $0.01404$ & $0.01324$ & $0.01780$\\
+\cline{2-7}
+& $\s_2$& $1.57577$ & $1.86337$ & $1.58302$ & $ 1.43715$ & $1.75334$\\
+\cline{2-7}
+& $\tau$& $0.16809  $ & $0.17736$ & $0.19509 $ & $0.18970$ & $0.21971$\\
+  \cline{1-7}
+
+\multirow{5}{2.5cm}{Gelman - Rubin} & $\a_1$ & \multicolumn{5}{|c|}{1.01}\\ \cline{2-7}
+&$\s_1$ &  \multicolumn{5}{|c|}{1.01} \\ \cline{2-7}
+&$\a_2$ &  \multicolumn{5}{|c|}{1.00} \\ \cline{2-7}
+&$\s_2$ &  \multicolumn{5}{|c|}{1.00} \\ \cline{2-7}
+&$\tau$ &  \multicolumn{5}{|c|}{1.00} \\ \cline{1-7}
+
+
+
+\end{tabular}
+\caption{Información de convergencia para el modelo $PM_{10}$, un punto de cambio. H-W=Heidelberger-Welch}
+\label{convergencia_updc_pm10}
+\end{table}
+
+
+%%%%%TABLA DE CONV UPDC PM2.5
+
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|c|l|l|l|l|l|}
+\hline
+& \multicolumn{6}{|c|}{Diagnóstico de convergencia} \\
+\cline{2-7}
+& Parámetro & cadena 1  & cadena 2  & cadena 3 & cadena 4 & cadena 5	 \\
+\hline \hline
+\multirow{5}{2.5cm}{Geweke} & $\a_1$ & $-0.2860$ & $-1.0051$ & $-17.774$ & $0.7692$  & $ -0.5075$\\ \cline{2-7}
+& $\s_1$& $-0.3071 $ & $-0.9200$ & $0-12.524$ & $0.7046 $ & $ -0.5437 $\\
+\cline{2-7}
+& $\a_2$& $-2.6915 $ & $-3.8182 $ & $-1.997$ & $ -1.5921$ & $-1.3143 $\\
+\cline{2-7}
+& $\s_2$& $-2.5533$ & $-3.4243$ & $-4.756$ & $ -1.4134$ & $-1.2864$\\
+\cline{2-7}
+& $\tau $& $0.2518  $ & $-0.2185 $ & $-13.928$ & $0.6264$ & $1.0813$\\
+  \cline{1-7}
+  \multirow{5}{2.5cm}{Raftery - Lewis} & $\a_1$ & $13.60$ & $11.20  $ & $8.37  $ & $14.30$  & $  12.10 $\\ \cline{2-7}
+& $\s_1$& $12.00 $ & $13.00 $ & $6.89$ & $11.40$ & $ 12.70 $\\
+\cline{2-7}
+& $\a_2$ & $4.54  $ & $3.14  $ & $4.19 $ & $2.85$ & $6.01 $\\
+\cline{2-7}
+& $\s_2$& $3.87 $ & $3.99$ & $2.60 $ & $29.10 $ & $5.17$\\
+\cline{2-7}
+& $\tau $& $7.59 $ & $4.33 $ & $14.40$ & $ 8.44 $ & $ 5.05$\\
+  \cline{1-7}
+  \multirow{5}{2.5cm}{H-W Estacionalidad} & $\a_1$ & $0.713$ & $0.2035  $ & $ 0.970$ & $0.381$  & $0.746$\\ \cline{2-7}
+& $\s_1$& $0.714  $ & $0.2018  $ & $0.982$ & $0.361$ & $0.743$\\
+\cline{2-7}
+& $\a_2$& $0.161$ & $0.0714$ & $0.104$ & $0.445$ & $0.217$\\
+\cline{2-7}
+& $\s_2$& $0.203 $ & $0.1176 $ & $0.166$ & $0.647$ & $0.322$\\
+\cline{2-7}
+& $\tau$& $0.951 $ & $0.1457  $ & $0.989$ & $0.563$ & $0.328$\\
+  \cline{1-7}
+  \multirow{5}{2.5cm}{H-W $1/2$ Ancho} & $\a_1$ & $0.0161$ & $0.0150 $ & $0.0184$ & $0.0148 $  & $ 0.0167 $\\ \cline{2-7}
+& $\s_1$& $0.5514 $ & $0.5158$ & $0.5726$ & $0.4953$ & $0.5719$\\
+\cline{2-7}
+& $\a_2$& $0.0239 $ & $0.0206$ & $0.0149$ & $0.0154$ & $0.0120$\\
+\cline{2-7}
+& $\s_2$& $1.4992$ & $1.1535$ & $0.8434$ & $ 0.8537$ & $0.6364$\\
+\cline{2-7}
+& $\tau$& $0.2058  $ & $0.1376$ & $5.0098 $ & $0.4146$ & $0.1456$\\
+  \cline{1-7}
+
+\multirow{5}{2.5cm}{Gelman - Rubin} & $\a_1$ & \multicolumn{5}{|c|}{1.03}\\ \cline{2-7}
+&$\s_1$ &  \multicolumn{5}{|c|}{1.01} \\ \cline{2-7}
+&$\a_2$ &  \multicolumn{5}{|c|}{1.03} \\ \cline{2-7}
+&$\s_2$ &  \multicolumn{5}{|c|}{1.05} \\ \cline{2-7}
+&$\tau$ &  \multicolumn{5}{|c|}{2.65} \\ \cline{1-7}
+
+
+
+\end{tabular}
+\caption{Información de convergencia para el modelo $PM_{2.5}$, un punto de cambio. H-W=Heidelberger-Welch}
+\label{convergencia_updc_pm25}
+\end{table}
+
+%%%%%TABLA DE CONV UPDC OZONO 
+
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|c|l|l|l|l|l|}
+\hline
+& \multicolumn{6}{|c|}{Diagnóstico de convergencia} \\
+\cline{2-7}
+& Parámetro & cadena 1  & cadena 2  & cadena 3 & cadena 4 & cadena 5	 \\
+\hline \hline
+\multirow{5}{2.5cm}{Geweke} & $\a_1$ & $0.1738$ & $-1.8966$ & $0.06743$ & $-3.1571$  & $-1.49105$\\ \cline{2-7}
+& $\s_1$& $-0.7537$ & $-0.8614$ & $0.23790$ & $-2.5854$ & $ -1.0130 $\\
+\cline{2-7}
+& $\a_2$& $-1.7965$ & $-1.6817$ & $1.22712$ & $0.8546$ & $1.02269$\\
+\cline{2-7}
+& $\s_2$& $-1.9557$ & $-1.6606$ & $1.19464$ & $  0.8934$ & $ 0.9521$\\
+\cline{2-7}
+& $\tau $& $-0.7835   $ & $ 1.1726 $ & $-0.22160$ & $0.9531$ & $1.7600$\\
+  \cline{1-7}
+  \multirow{5}{2.5cm}{Raftery - Lewis} & $\a_1$ & $2.54$ & $2.67$ & $1.76  $ & $ 1.80$  & $  1.91 $\\ \cline{2-7}
+& $\s_1$& $1.34  $ & $1.24 $ & $1.37$ & $11.40$ & $34.00$\\
+\cline{2-7}
+& $\a_2$ & $ 16.60 $ & $29.60  $ & $29.40 $ & $32.50$ & $ 2.51  $\\
+\cline{2-7}
+& $\s_2$& $20.70 $ & $ 18.50$  & $27.60$ & $35.70 $ & $42.00$\\
+\cline{2-7}
+& $\tau $& $2.90	$ & $ 2.52$ & $32.30$ & $ 2.11$ & $ 9.89$\\
+  \cline{1-7}
+  \multirow{5}{2.5cm}{H-W Estacionalidad} & $\a_1$ & $0.360$ & $0.000394 $ & $0.421$ & $0.0629$  & $0.222 $\\ \cline{2-7}
+& $\s_1$& $0.193   $ & $0.070700  $ & $0.2334$ & $0.2334$ & $0.808 $\\
+\cline{2-7}
+& $\a_2$& $0.634 $ & $0.731613$ & $0.529$ & $0.6852$ & $0.340$\\
+\cline{2-7}
+& $\s_2$& $0.582 $ & $0.777112$ & $0.504$ & $ 0.6699$ & $0.286 $\\
+\cline{2-7}
+& $\tau$& $0.729 $ & $0.206458 $ & $0.574$ & $ 0.3733$ & $ 0.183$\\
+  \cline{1-7}
+  \multirow{5}{2.5cm}{H-W $1/2$ Ancho} & $\a_1$ & $0.0134$ & $NA $ & $0.00964$ & $0.0143 $  & $0.0107 $\\ \cline{2-7}
+& $\s_1$& $0.1459 $ & $0.1456$ & $0.13497$ & $0.1554$ & $0.1403$\\
+\cline{2-7}
+& $\a_2$& $0.0283 $ & $0.0256$ & $0.02509$ & $0.0264$ & $0.0265$\\
+\cline{2-7}
+& $\s_2$& $2.5965$ & $2.3807$ & $2.32836$ & $ 2.3940$ & $2.4613$\\
+\cline{2-7}
+& $\tau$& $1.2920 $ & $2.0953$ & $0.56484 $ & $ 1.9224$ & $0.9394$\\
+  \cline{1-7}
+
+\multirow{5}{2.5cm}{Gelman - Rubin} & $\a_1$ & \multicolumn{5}{|c|}{1.01}\\ \cline{2-7}
+&$\s_1$ &  \multicolumn{5}{|c|}{1.00} \\ \cline{2-7}
+&$\a_2$ &  \multicolumn{5}{|c|}{1.03} \\ \cline{2-7}
+&$\s_2$ &  \multicolumn{5}{|c|}{1.03} \\ \cline{2-7}
+&$\tau$ &  \multicolumn{5}{|c|}{1.16} \\ \cline{1-7}
+
+
+
+\end{tabular}
+\caption{Información de convergencia para el modelo $O_3$, un punto de cambio. H-W=Heidelberger-Welch}
+\label{convergencia_updc_ozono}
+\end{table}
+
+
+
+
