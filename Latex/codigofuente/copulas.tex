@@ -1,0 +1,123 @@
+\section{Funciones cópula}
+
+El interés en el presente trabajo está, en determinar la correlación de dos procesos estocásticos relacionados con la contaminación del aire de la ciudad de Bogotá, para eso se hará uso de las funciones cópula, las cuales, dos a dos, darán un valor $\theta$ que determinará si la correlación es negativa, positiva o cero, arrojando resultados en el intervalo $[-1,1]$ 
+
+
+\section{Definición de función Cópula[Nelsen (2006) \cite{nelsen}]}
+
+Las cópulas son funciones que determinan distribuciones multivariadas a partir de las distribuciones marginales de una dimensión.
+
+\textbf{Preliminares:}
+Durante el proyecto se trabajará con la siguiente notación: 
+\\
+Se define $\R$ como la recta real usual, y $\overline{\R}$ como la recta real $[-\infty,\infty]$, en este caso $\overline{\R}^2$ denota el plano real extendido $\overline{\R}\times\overline{\R}$. Un rectángulo en $\overline{\R}^2$ es el producto cartesiano $B$ de dos intervalos cerrados: $$B=[x_1,y_1]\times[x_2,y_2]$$  Se define también el cuadrado unitario $\textbf{I}^2$ como el producto $\textbf{I}\times \textbf{I}$, donde $\textbf{I}=[0,1]$.
+
+\vspace{0.5cm}
+\textbf{Definición 1:} Una función real $2-place$ $H$ se define como una función cuyo dominio $DomH$ es un subconjunto de $\overline{\R}^2$ y cuyo rango, $RanH$ es un subconjunto de $\R$. 
+\vspace{0.5cm}
+
+\textbf{Definición 2:} Sea $S_1$ y $S_2$ subconjuntos no vacíos de $\overline{\R}$, y sea $H$ una función real $"2-place"$ tal que su dominio es $S_1 \times S_2$. Sea $B=[x_1,y_1]\times[x_2,y_2]$ un rectángulo cuyos vértices están estan en el $DomH$. Entonces el $H-volume$ de $B$ está dado por: 
+
+$$V_H(B)= H(x_2,y_2)-H(x_2,y_1)-H(x_1,y_2) +H(x_1,y_1)$$
+
+\vspace{0.4cm}
+\textbf{Definición 3:} Una función real $2-place$ es $2-creciente$ si $V_H(B)\geq 0$ para todos los rectángulos $B$ cuyos vértices están en el dominio de $H$. 
+
+
+Dada la información anterior, es posible ahora definir lo que son las Cópulas, pues son un concepto fundamental en el desarrollo del presente trabajo. Sin embargo para definirlas, antes es necesario definir lo que es una subcópula: 
+
+
+\textbf{Definición 4:} Una subcópula $2-dimensional$ es una función $C$ con las siguientes propiedades:
+
+\begin{enumerate}
+    \item $DomC'=S_1 \times S_2$, donde $S_1$ y $S_2$ son subconjuntos de $\textbf{I}$ que contienen a $0$ y a $1$;
+    \item $C'$ es cerrado y $2-creciente$
+    
+    \item Para cada $u$ en $S_1$ y cada $v$ en $S_2$,
+    
+    $$C'(u,1)=u \text{ y } C'(1,v)=v$$
+\end{enumerate}
+
+\textbf{Definición 5:} Una cópula $2-dimensional$ es una \textit{2-subcopula C} cuyo dominio es \textbf{${I}^2$}. 
+
+De forma equivalente, una cópula es una función $C$ de $\textbf{I}^2$ en $\textbf{I}$ que satisface las siguientes propiedades. 
+
+\begin{enumerate}
+    \item Para cada $u, v$ en $\textbf{I}$, 
+    $$C(u,0)=0=C(0,v) $$
+    y
+    $$C(u,1)=u \text{ y } C(1,v)=v; $$ 
+    
+    \item Para cada $u_1, u_2, v_1, v_2 $ en $\textbf{I}$ tal que $u_1 \leq u_2$ y $v_1 \leq v_2$,
+    
+    $$C(u_2,v_2)-C(u_2,v_1)-C(u_1,v_2)+C(u_1,u_2)\geq 0  $$
+    
+\end{enumerate}
+
+
+\textbf{Teorema 2.1} (Teorema de Sklar \cite{sklar}).
+\textit{Sea $F(\cdot,\cdot)$ una distribución conjunta con distribuciones marginales $F_1(\cdot)$ y $F_2(\cdot)$ respectivamente. Entonces, existe una cópula $C(\cdot,\cdot)$ tal que: }
+
+
+\begin{equation}
+F(x,y)=C(F_1(x),F_2(y)),\text{ para todo }x,y \in (-\infty,\infty)
+\label{teosklar}
+\end{equation}
+
+La demostración de este teorema se puede encontrar en \cite{sklar}. 
+
+En \cite{tesisbiviana}, Suarez (2020), hace uso de las funciones cópulas para determinar de manera detallada la función de riesgo bivariada $\lambda(t_1,t_2)$, la función de media acumulada (apróximada) $M(t_1,t_2)$ y la función de riesgo acumulada bivariada $m(t_1,t_2)$. 
+
+
+\section{Cópula Farlie-Gumbel-Morgenstern (FGM)}
+
+Existen diferentes cópulas propuestas, dependiendo de la situación en cuestión, para este estudio, al igual que en \cite{tesisbiviana} se utilizará la copula propuesta por Morgenstern (1956), citado por Fraile(1960) en \cite{farlie} cuyas marginales son Weibull. 
+
+\textbf{Distribución bivariada Weibull:}
+
+
+\begin{equation}
+\label{copulafarlie}
+F(x)G(x)[1+\theta\{1-F(x)\}\{1-G(x)\}]
+\end{equation}
+
+En la cual, $F(x), G(x) \in [0,1]$ y $\theta\in [-1,1]$
+
+Suárez. B, (2020) en \cite{tesisbiviana} en el capítulo $3.2$ realiza una descripción detallada de la manera como se obtienen las funciones mencionadas anteriormente. Esto lo hace inicialmente, partiendo de que las funciones $F(x)=F_1(t_1), G(x)=F_2(t_2)$ sean las funciones marginales definidas de la siguiente manera: 
+
+\begin{equation}
+\label{marginales}
+F_i(t_i)=1-\exp\left\lbrace-\left(\frac{t_i}{\s_i}\right)^{\a_i}\right\rbrace, \text{ con } \a_i, \s_i >0, i=1,2.
+\end{equation}
+
+De esta manera, al sustituir las marginales \ref{marginales} en la ecuación \ref{copulafarlie}, se obtiene: 
+
+\begin{equation}
+\label{funcionF}
+\begin{split}
+F(t_1,t_2) & = \left(1-\exp\left\lbrace-\left(\frac{t_1}{\s_1}\right)^{\a_1}\right\rbrace\right)\left(1-\exp\left\lbrace-\left(\frac{t_2}{\s_2}\right)^{\a_2}\right\rbrace\right)\\
+ & \times \left(1+\theta\exp\left\lbrace-\left(\frac{t_1}{\s_1}\right)^{\a_1}-\left(\frac{t_2}{\s_2}\right)^{\a_2}\right\rbrace\right)
+\end{split}
+\end{equation}
+
+
+\textbf{Función de densidad conjunta Weibull:}
+\begin{equation}
+\label{densidad_conjunta}
+f(t_1,t_2)=f_1(t_1)f_2(t_2)[1+\theta[1-2F_1(t_1)][1-2F_2(t_2)]]\end{equation}
+
+Donde $f_i(\cdot)$ es la función de densidad asociada a $F_i(\cdot), i=1,2.$
+
+
+\textbf{Función de riesgo acumulada:}
+
+La ecuación \ref{riesgo_acumulada} es una de las más importantes en el presente documento, pues es la cópula que determina el modelo de programación utilizado para determinar los parámetros de correlación entre los dos contaminantes. 
+
+Para llegar a ella, Suárez. B, (2020), muestra detalladamente en \cite{tesisbiviana} la manera de obtenerla y realiza además su demostración. 
+
+\begin{equation}
+\label{riesgo_acumulada}
+\lambda(t_1,t_2)=\left(\frac{\a_1}{\s_1}\right)\left(\frac{\a_2}{\s_2}\right)\left(\frac{t_1}{\s_1}\right)^{\a_1-1}
+\left(\frac{t_2}{\s_2}\right)^{\a_2-1}
+\frac{\left[1+\theta\left(1-2\exp\left\lbrace-\left(\frac{t_1}{\s_1} \right)^{\a_1}\right\rbrace\right)\left(1-2\exp\left\lbrace-\left(\frac{t_2}{\s_2} \right)^{\a_2}\right\rbrace\right) \right]}{\left[1+\theta\left(1-\exp\left\lbrace-\left(\frac{t_1}{\s_1} \right)^{\a_1}\right\rbrace\right)\left(1-\exp\left\lbrace-\left(\frac{t_2}{\s_2} \right)^{\a_2}\right\rbrace\right) \right]}
+\end{equation}

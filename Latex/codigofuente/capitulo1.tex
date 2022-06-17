@@ -1,9 +1,49 @@
-\chapter{Recolección de datos} 
+\chapter{Modelos univariados para los contaminantes $PM_{10}, PM_{2.5}$ y $O_3$} 
+
+
+\section{Descripción de los datos}
 
 Para el estudio de la correlación de los contaminantes del aire de Bogotá, se trabajará con las concentraciones de 1096 días, correspondientes a los años 2018 a 2020, de material particulado de 10 micrómetros de tamaño, $PM 10$, material particulado de 2.5 micrómetros de tamaño, $PM 2.5$ y Ozono, $O_3$. 
 
+\subsection{Material particulado de $10\mu m$ y $2.5\mu m$ $(PM_{10})$ y $(PM_{2.5})$ respectivamente.}
 
-Para el correspondiente análisis, es necesario estudiar la reglamentación establecida por el ministerio de ambiente y desarrollo sostenible de Colombia, el cual, en la resolución N° $2254$ del 1 de noviembre de 2017: \textit{Por la cual se adopta la norma del aire y se dictan otras disposiciones,} establece que a partir del 1 de julio del 2018 los niveles máximos permisibles de contaminantes criterio en el aire son los que se presentan en la tabla \ref{nivelesperm}:
+El material particulado $(PM)$ es una mezcla de partículas sólidas y líquidas que se encuentran en el aire y que son imposibles de observar a simple vista. 
+
+Esta contaminación por partículas contiene, entre otros, los dos análizados en el presente estudio: 
+
+\begin{enumerate}
+
+\item
+\textbf{$PM_{10}$} que son partículas que el ser humano puede inhalar, de $10$ o menos $\mu m$ de diámetro. 
+
+\item
+\textbf{$PM_{2.5}$} al igual que el anterior, es un contaminante de acceso respiratorio de $2.5$ o menos $\mu m$ de diámetro.
+\end{enumerate}
+
+En \cite{EPA}, la Agencia de protección Ambiental de Estados Unidos, presenta una comparación del tamaño de estas partículas, por ejemplo, el diámetro del grosor de un cabello humano promedio, es de $50\mu m$ a $70\mu m$, un grano de arena fina de playa, $90\mu m$ esta comparación la realizan mediante la ilustración de la figura \ref{cabello}, aquí, de color azul se observa el tamaño aproximado del $PM_{10}$ y de color fucsia el tamaño del $PM_{2.5}$, claramente se ve la diferencia y es obvio el porqué son imperceptibles a simple vista.  
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.8]{cabello}
+\end{center}
+\centering
+\caption{Comparación del tamaño del material particulado. \cite{EPA}}
+\label{cabello}
+\end{figure}
+
+
+De acuerdo con la organización mundial de la salud (2018), la contaminación del aire aumenta cada día más, en paises de bajo y medio ingreso, afectando la salud de los niños, principalmente. En el año 2016 las muertes de niños a causa de enfermedades respiratorias como consecuencia de la contaminación atmosférica, ascendieron a las $600.000$ en todo el mundo. 
+
+En \cite{OMS}, se menciona que una de las principales causas de que los niños sean los que mas sufren por la contaminación atmosférica, es porque ellos respiran mas rápido que los adultos, razon por la cual, absorven mas micropartículas. 
+
+A causa de lo anterior y de los descubrimientos sobre cancer de pulmón causados por el material partículado, en \cite{IARC} la organización mundia de la salud, establece algunas medidas que se deben tomar en todos los países para contrarestar esta situación y evitar que la contaminación continue cobrando vidas. 
+
+Estas medidas establecidas estan relacionadas con la toma de acciones y la creación de políticas públicas que eviten la contaminación y reglamenten el uso adecuado de los recursos en las industrias públicas y privadas para disminuir su aporte de contaminación. 
+
+\subsection{Ozono ($O_3$)} El Ozono, es un gas, que al rededor del ser humano puede generar daños a la salud respiratoria. Exposiciones por horas continuas a altas concentraciones de este contaminante pueden reducir la capacidad pulmonar, inflamar las vías respiratorias, producir infecciones respiratorias, etc. 
+
+\section{Reglamentación}
+Para el presente análisis, es necesario estudiar la reglamentación establecida por el ministerio de ambiente y desarrollo sostenible de Colombia, el cual, en la resolución N° $2254$ del 1 de noviembre de 2017: \textit{Por la cual se adopta la norma del aire y se dictan otras disposiciones,} establece que a partir del 1 de julio del 2018 los niveles máximos permisibles de contaminantes criterio en el aire son los que se presentan en la tabla \ref{nivelesperm}:
 \begin{table}[!h]
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -19,6 +59,8 @@ $0_3$ & $100 ppb$ \\\hline
 \end{center}
 \end{table}
 
+\section{Datos de los tres contaminantes:}
+
 Estos 1096 datos diarios de los tres contaminantes, fueron obtenidos a partir de los datos horarios registrados en las 13 estaciones de monitoreo de calidad del aire de Bogotá. Para el caso del $PM_{10}$ y $PM_{2.5}$ se determinaron promedios por cada 24 horas y de estos promedios se elegía el valor máximo; para el caso del $O_3$, algo similar, solo que, en lugar de promedio se tomo el máximo de cada periodo de un día. 
 
 A continuación, se verifica mediante el software R, la cantidad de veces que estos umbrales se rebasan en los 1096 días de los años 2018 a 2020, en la figura \ref{seriesdet} se muestran las series de tiempo que describen el comportamiento diario de los contaminantes durante los tres años analizados.
@@ -26,8 +68,6 @@ A continuación, se verifica mediante el software R, la cantidad de veces que es
 Para el caso del PM 10, sucede algo particular y es que sus valores máximo y mínimo suceden en el mismo mes, aquí se observa que el día 24 de junio del 2020, se presentó una medición de $172.37$, sobrepasando considerablemente el máximo permitido y para el día 15 de junio del mismo año, se obtuvo una medición mínima en los tres años de $14.06$. Para este contaminante, se observaron un total de $318$ rebases.
 
 En cuanto al material particulado $PM_{2.5}$ se observó que este rebasaba los umbrales permitidos un $30,3\%$ de veces, con un total de $332$ días en los que la norma no se esta cumpliendo, se puede observar en la figura \ref{seriesdet} que el día 28 de marzo del 2019, este contaminante sobrepasó el umbral permitido en más del $200\%$. 
-
-
 
 
 Para la serie de tiempo que muestra los máximos diarios de concentración de Ozono en la ciudad de Bogotá, se debe tener en cuenta que, en la resolución número $2254$ del ministerio de ambiente y desarrollo sostenible, se presenta el umbral de este contaminante medido en $\mu g / m^3$ y en las estaciones de monitoreo se recibe la información en partes por billón $(ppb)$, de manera que se debe realizar la revisión de rebases, cuando los datos recogidos superen el valor aproximado de $50,9375 \text{ } ppb$ que corresponde a los $100 \mu g / m^3$ que establece la norma, esto nos da un total de 219 rebases en los tres años analizados. 
@@ -80,12 +120,12 @@ Para estudiar el número de rebases de los umbrales ambientales, se considera un
 $$\lambda(t)=\frac{\a}{\b}\left(\frac{t}{\b}   \right)^{\a -1}, \a, \b >0 \text{ y } t \geq 0 $$ 
 
 A partir de esta expresión se construyen las funciones de riesgo para cada uno de los modelos, teniendo en cuenta que cuando el parámetro $\a<1$ la función es decreciente, si $\a>1$  será creciente y constante cuando $\a=1$
-
+\newpage
 \section{Sin puntos de cambio}
 
-Para estimar los parámetros de este modelo, se realizaron $20.000$ iteraciones y se eliminaron $2.000$ de ellas. En esta implementación se encontró que para el $PM_{10}$, los parámetros son $\a=1.02$ y $\b=3.87$, lo cual indica que la función de riesgo será creciente, esto lo que quiere decir, es que el número de rebases tiende a aumentar con el paso del tiempo. 
+Para estimar los parámetros de este modelo, se realizaron $20.000$ iteraciones y se eliminaron $2.000$ de ellas. En esta implementación se encontró que para el $PM_{10}$, los parámetros son $\a=0.89$ y $\b=1.76$, lo cual indica que la función de riesgo será decreciente, esto lo que quiere decir, es que el número de rebases tiende a disminuir con el paso del tiempo. 
 
-Para el caso del $PM_{2.5}$, se obtuvo: $\a=1.16$ y $\b=1.75$ y para el ozono, $\a=1.21$ y $\b=13.37$, estos últimos valores de $\a$ demuestran que las funciones también son crecientes, de manera que con el paso del tiempo los niveles de contaminación de $PM_{2.5}$ y $O_3$ aumentarán.  
+Para el caso del $PM_{2.5}$, se obtuvo: $\a=1.16$ y $\b=1.75$ y para el ozono, $\a=1.21$ y $\b=13.37$, estos últimos valores de $\a$ demuestran que las funciones son crecientes, de manera que con el paso del tiempo los niveles de contaminación de $PM_{2.5}$ y $O_3$ aumentarán.  
 
 En ausencia de puntos de cambio, se determinaron los siguientes parámetros $\a$  y  $\b$ con los cuales se podrán construir las funciones de riesgo acumuladas: 
 
@@ -97,10 +137,10 @@ En ausencia de puntos de cambio, se determinaron los siguientes parámetros $\a$
 \cline{2-6}
 & Parámetros & dist. inicial  & Media & sd  &   intervalo $95 \%$\\
 \hline \hline
-\multirow{2}{1.5cm}{$PM_{10}$} & $\a_1$ & $unif(1,3)$ & $1.02$ & $0.01$ & $(1.00;1.06)$ \\ \cline{2-6}
-& $\b_1$& $unif(1,10)$ & $3.87$ & $0.45$ & $(3.25;4.99)$\\  \cline{1-6}
-\multirow{2}{1.5cm}{$PM_{2.5}$} & $\a_1$ & $dunif(1,2.5)$& $1.16$ & $0.03$ & $(1.12;1.24)$\\ \cline{2-6}
-& $\b_1$ & \multicolumn{1}{c|}{$dunif(6.3;78.5)$} & $1.75$ & $0.42$ & $(6.43;10.13)$\\ \cline{1-6}
+\multirow{2}{1.5cm}{$PM_{10}$} & $\a_1$ & $unif(1,3)$ & $0.89$ & $0.05$ & $(0.79;0.99)$ \\ \cline{2-6}
+& $\b_1$& $unif(1,10)$ & $1.76$ & $0.65$ & $(0.77;3.28)$\\  \cline{1-6}
+\multirow{2}{1.5cm}{$PM_{2.5}$} & $\a_1$ & $dunif(1,2.8)$& $1.25$ & $0.02$ & $(1.22;1.31)$\\ \cline{2-6}
+& $\b_1$ & \multicolumn{1}{c|}{$dunif(10;100)$} & $10.85$ & $0.83$ & $(10.02;13.06)$\\ \cline{1-6}
 \multirow{2}{1.5cm}{$O_3$} & $\a_1$ & $dunif(1,5.99)$ & $1.21$& $0.03$ & $(1.16;1.29)$\\ \cline{2-6}
 &$\b_1$ & \multicolumn{1}{c|}{$dunif(11.9,141)$} & $13.37$ & $1.41$ & $(11.94;17.12)$\\ \cline{1-6}
 \end{tabular}
@@ -116,7 +156,7 @@ Teniendo estos parámetros,en la figura \ref{riesgo} se presentan las diferentes
 
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[width=15cm]{rate_function_spdc}
+\includegraphics[width=13cm]{RIESGOSPC}
 \end{center}
 \centering
 \caption{ Función de riesgo $\lambda (t) $, estimada para el modelo en ausencia de puntos de cambio.  }
@@ -130,7 +170,7 @@ El comportamiento de los rebases de cada contaminante se puede observar a travé
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=13cm]{spdc_means}
+\includegraphics[width=11cm]{MEANSSPC}
 \end{center}
 \centering
 \caption{ Función de media acumulada (azul), junto con los intervalos de confianza estimados con un 95\% de confianza (verde) y los datos observados (negro).  }
@@ -158,7 +198,7 @@ Para estos modelos se tendrán en cuenta dos tramos de las gráficas de medias a
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=12cm]{means_updc}
+\includegraphics[width=11cm]{MEANSUPC}
 \end{center}
 \centering
 \caption{ Función de media acumulada (azul), junto con los intervalos de confianza estimados con un 95\% de confianza (verde) y los datos observados (negro), para un punto de cambio.  }
@@ -178,22 +218,23 @@ Los parámetros estimados para este modelo, fueron obtenidos realizando 20.000 i
 \cline{2-6}
 & Parámetros & dist. inicial  & Media & sd  &   intervalo $95 \%$\\
 \hline \hline
-\multirow{5}{1.5cm}{$PM_{10}$} & $\tau_1$ & $dunif(350,450))$ & $318.94$ & $ 17.86 $ & $(284.70;354.50)$ \\ \cline{2-6}
-& $\a_1$& $dunif(1, 3)$ & $1.09$ & $0.06$ & $(1.00;1.23)$\\  \cline{2-6}
-& $\b_1$& $dunif(1,100)$ & $316.30$ & $17.61$ & $(282.86;351.89)$\\  \cline{2-6}
-& $\a_2$& $dunif(1,3)$ & $2.02$ & $0.11$ & $(1.74; 2.17)$\\  \cline{2-6}
-& $\b_2$& $dunif(1,100)$ & $316.61$ & $17.63 $ & $(283.16;352.24)$\\  \cline{1-6}
+\multirow{5}{1.5cm}{$PM_{10}$} & $\tau_1$ & $dunif(350,450))$ & $445.13$ & $ 4,34 $ & $(432.79;449.89)$ \\ \cline{2-6}
+& $\a_1$& $dunif(1, 3)$ & $1.06$ & $0.08$ & $(0.91;1.21)$\\  \cline{2-6}
+& $\b_1$& $dunif(1,100)$ & $3,63$ & $1.25$ & $(1.56;6.48)$\\  \cline{2-6}
+& $\a_2$& $dunif(1,3)$ & $2.01$ & $0.13$ & $(1.68; 2.17)$\\  \cline{2-6}
+& $\b_2$& $dunif(1,100)$ & $84.23$ & $13.54 $ & $(49.34;99.55)$\\  \cline{1-6}
 \multirow{5}{1.5cm}{$PM_{2.5}$} & $\tau_1$ & $dunif(350,500)$& $483.53$ & $9.44$ & $(465.86;498.37)$\\ \cline{2-6}
 & $\a_1$& $dunif(1,2.5)$ & $1.45$ & $0.11$ & $(1.25;1.68)$\\  \cline{2-6}
 & $\b_1$& $dunif(6.4, 78.5)$ & $14.90$ & $4.04$ & $(8.19;23.72)$\\  \cline{2-6}
 & $\a_2$& $dunif(1,2.5))$ & $1.28$ & $0.15$ & $(1.10;1.65)$\\  \cline{2-6}
 & $\b_2$& $dunif(6.4, 78.5)$ & $15.21$ & $9.15$ & $(6.58;41.13)$\\  \cline{1-6}
-\multirow{5}{1.5cm}{$O_3$} & $\tau_1$ & $dunif(50,200)$ & $49.70$& $14.52$ & $(23.24;82.00)$\\ \cline{2-6}
-& $\a_1$& $dunif(1, 5.9)$ & $1.83$ & $0.17$ & $(1.57;2.24)$\\  \cline{2-6}
-& $\b_1$& $dunif(11.9, 141)$ & $212.85$ & $14.48$ & $(185.59;242.55)$\\  \cline{2-6}
-& $\a_2$& $dunif(1, 5.9)$ & $1.67$ & $0.16$ & $(1.36;2.00)$\\  \cline{2-6}
-& $\b_2$& $dunif(11.9, 141)$ & $14.59$ & $2.29$ & $(11.98;20.36)$\\  \cline{1-6}
+\multirow{5}{1.5cm}{$O_3$} & $\tau_1$ & $dunif(50,200)$ & $96.40$& $5.89$ & $(83,56;104,13)$\\ \cline{2-6}
+& $\a_1$& $dunif(1, 6)$ & $1.83$ & $0.17$ & $(1.57;2.24)$\\  \cline{2-6}
+& $\b_1$& $dunif(11.9, 141)$ & $14.69$ & $2.35$ & $(11.99; 20.71)$\\  \cline{2-6}
+& $\a_2$& $dunif(1, 5.9)$ & $1.66$ & $0.15$ & $(1.38;1.97)$\\  \cline{2-6}
+& $\b_2$& $dunif(11.9, 141)$ & $48.45$ & $13.98$ & $(24.36;79.27)$\\  \cline{1-6}
 \end{tabular}
+
 \caption{Información estadística de cada modelo con un  punto de cambio.}
 \label{infoestadupc}
 \end{table}
@@ -201,21 +242,87 @@ Los parámetros estimados para este modelo, fueron obtenidos realizando 20.000 i
 
 \begin{figure}[hbt!]
 \begin{center}
-\includegraphics[width=13cm]{Rate_function_upc}
+\includegraphics[width=13cm]{RIESGOUPC}
 \end{center}
 \centering
 \caption{ Función de riesgo $\lambda (t)$, estimada para el modelo construido bajo un punto de cambio.   }
 \label{rate_upc}
 \end{figure}
 
-
+\newpage
 \section{Dos puntos de cambio:}
+
+Al igual que en la sección anterior, de manera que se eligieron dos puntos de cambio que visualmente parecen ser representativos y en los cuales, según las fechas, hubo implementaciones de normas para combatir la contaminación ambiental, estos son por ejemplo, para el caso del contaminante $PM_{10}$ los días $\tau_1=446$ y $\tau_2=754$ aproximadamente, para el $PM_{2.5}$ los días $\tau_1=460$ y $\tau_2=821$ y para el $O_3$ los días $\tau_1=99$ y $\tau_2=468$ 
+Abril del 2018 \cite{res2018}, Marzo del 2019\cite{barreto}, Enero del 2020 y marzo del 2020 \cite{dec2020} y \cite{dec20202}. 
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|c|l|l|l|l|}
+\hline
+& \multicolumn{5}{c|}{Información estadística} \\
+\cline{2-6}
+& Parámetros & dist. inicial  & Media & sd  &   intervalo $95 \%$\\
+\hline \hline
+\multirow{8}{1.5cm}{$PM_{10}$} & $\tau_1$ & $dunif(250,450))$ & $446.22$ & $3.63 $ & $(437.42;449.93)$ \\ \cline{2-6}
+& $\tau_2$& $dunif(700, 900)$ & $754.19$ & $18.09$ & $(726.01;777.40)$\\  \cline{2-6}
+& $\a_1$& $dunif(0,3)$ & $1.07$ & $0.08$ & $(0.92;1.23)$\\  \cline{2-6}
+& $\b_1$& $dunif(0,100)$ & $3.71$ & $1.32$ & $(1.61; 6.74)$\\  \cline{2-6}
+& $\a_2$& $dunif(0,3)$ & $1.33$ & $0.32$ & $(0.74; 1.23)$\\  \cline{2-6}
+& $\b_2$& $dunif(0,100)$ & $37.39$ & $27.07$ & $(1.43; 94.18)$\\  \cline{2-6}
+& $\a_3$& $dunif(0,3)$ & $1.89$ & $0.26$ & $(1.24; 2.21)$\\  \cline{2-6}
+& $\b_3$& $dunif(0,100)$ & $66.40$ & $24.67 $ & $(11.47;98.78)$\\  \cline{1-6}
+\multirow{8}{1.5cm}{$PM_{2.5}$} & $\tau_1$ & $dunif(300,500)$& $460.23$ & $43.77$ & $(368.97;498.00)$\\ \cline{2-6}
+& $\tau_2$& $dunif(698,898)$ & $821.60$ & $3.36$ & $(817.50;829.87)$\\  \cline{2-6}
+& $\a_1$& $dunif(1,3.5)$ & $1.37$ & $0.18$ & $(1.02;1.67)$\\  \cline{2-6}
+& $\b_1$& $dunif(1,100)$ & $13.19$ & $4.94$ & $(5.02;23.27)$\\  \cline{2-6}
+& $\a_2$& $dunif(1,3.5)$ & $2.05$ & $0.47$ & $(1.06;2.50)$\\  \cline{2-6}
+& $\b_2$& $dunif(1,100)$ & $66$ & $33.44$ & $(2.94;99.07)$\\  \cline{2-6}
+& $\a_3$& $dunif(1,3.5))$ & $1.66$ & $0.19$ & $(1.18;1.92)$\\  \cline{2-6}
+& $\b_3$& $dunif(1,100)$ & $71.063$ & $22.56$ & $(18.20;99.07)$\\  \cline{1-6}
+\multirow{8}{1.5cm}{$O_3$} & $\tau_1$ & $dunif(50,200)$ & $99.18$& $1.81$ & $(97.51;104,09)$\\ \cline{2-6}
+& $\tau_2$& $dunif(350,500)$ & $468.10$ & $4.02$ & $(462.65;479.67)$\\  \cline{2-6}
+& $\a_1$& $dunif(1,6)$ & $1.83$ & $0.16$ & $(1.57;2.20)$\\  \cline{2-6}
+& $\b_1$& $dunif(12,141)$ & $14.64$ & $2.25$ & $(12.08;20.35)$\\  \cline{2-6}
+& $\a_2$& $dunif(1,6)$ & $3.30$ & $0.19$ & $(2.86;3.59)$\\  \cline{2-6}
+& $\b_2$& $dunif(12, 141)$ & $131.81$ & $8.48$ & $(109.41; 140.74)$\\  \cline{2-6}
+& $\a_3$& $dunif(1, 6)$ & $2.12$ & $0.21$ & $(1.62;2.41)$\\  \cline{2-6}
+& $\b_3$& $dunif(12, 141)$ & $107.05$ & $25.23$ & $(47.89;139.68)$\\  \cline{1-6}
+\end{tabular}
+\caption{Información estadística de cada modelo con dos puntos de cambio.}
+\label{infoestaddpc}
+\end{table}
+
+Los resultados de utilizar estos puntos de cambio correspondientes a las siguientes fechas aproximadas, Abril del 2018, Marzo del 2019, Enero del 2020 y marzo del 2020, se presentan en la figura \ref{mediasacumdpc}, aquí se observa la manera en que el ajuste es cada vez mas perfecto. 
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=12cm]{MEANSDPC}
+\end{center}
+\centering
+\caption{ Función de media acumulada (azul), junto con los intervalos de confianza estimados con un 95\% de confianza (verde) y los datos observados (negro), para dos puntos de cambio.  }
+\label{mediasacumdpc}
+\end{figure}
+
+Con los parámetros obtenidos para cada uno de los intervalos de tiempo determinados por los dos puntos de cambio, tabla \ref{infoestaddpc}, se determinan las funciones de riesgo que describen el comportamiento de los tres contaminantes en cada periodo de tiempo. 
+En la figura \ref{rate_dpc} se observa qué las medidas implementadas por la alcaldía de Bogotá funcionan, pero de manera momentanea, por ejemplo para el caso del $PM_{10}$ se observa como los niveles de contaminación en el primer tramo son altos, y luego para el segundo momento disminuyen y tienden a permanecer 'constantes'; sin embargo para el momento que sigue, la implementación de restricciones de movilidad y control de contaminantes en grandes industrias de febrero y marzo del 2020, cuando se declaró emergencia ambiental, ocasionaron, según la grafica, que el nivel de concentración de $PM_{10}$ empezara a aumentar y a mostrar una tendencia creciente. 
+
+\begin{figure}[hbt!]
+\begin{center}
+\includegraphics[width=13cm]{RATEDPC}
+\end{center}
+\centering
+\caption{ Función de riesgo $\lambda (t)$, estimada para el modelo construido bajo dos puntos de cambio.   }
+\label{rate_dpc}
+\end{figure}
+
+
+
+\newpage
 
 \section{Política pública:}
 
-Como ya se mencionó, los puntos de cambio de los modelos construidos se determinaron principalmente con ayuda de las gráficas de las medias acumuladas de cada uno de los contaminantes, para justificar estos puntos, una estrategia es identificar algunas de las estrategias del gobierno nacional para mitigar la contaminación ambiental durante estas fechas.
-Uno de los insumos mas importantes que permite identificar esto, es el \textit{plan decenal de desconaminación del aire de Bogotá} que elabora cada 10 años y al cual se le realizan revisiones periódicas para verificar su alcance y cumplimiento. 
-El documento que compete a esta investigación, es el elaborado para la década del 2010 al 2020 \cite{plandecenal}, en el cual, al igual que en la anterior década, se centran en la implementación de las siguientes acciones para mejorar la calidad del aire 
+Como ya se mencionó, los puntos de cambio de los modelos construidos se determinaron principalmente con ayuda de las gráficas de las medias acumuladas de cada uno de los contaminantes, para validar estos puntos, una posibilidad es identificar algunas de las estrategias del gobierno nacional para mitigar la contaminación ambiental durante estas fechas.
+Uno de los insumos mas importantes que permite identificar esto, es el \textit{plan decenal de desconaminación del aire de Bogotá} que se elabora cada 10 años y al cual se le realizan revisiones periódicas para verificar su alcance y cumplimiento. 
+El documento que compete a esta investigación, es el elaborado para la década del 2010 al 2020 \cite{plandecenal}, en el cual, al igual que en la anterior década, se centran en la implementación de las siguientes acciones para mejorar la calidad del aire: 
 
 \begin{itemize}
 \item Pico y placa ambiental.
@@ -226,23 +333,14 @@ El documento que compete a esta investigación, es el elaborado para la década 
 \item Inventarios de emisiones. 
 \end{itemize}
 
-Estas acciones, se organizaron para ser implementadas durante los 10 años, para el caso del periodo de tiempo que se esta teniendo en cuenta en el presente documento, las acciones planteadas son, para el 2019 y 2020 únicamente, en el sector industrial, se estableció el proyecto \textit{Uso de sistemas de control
+Estas acciones, se organizaron para ser implementadas durante los 10 años en diferentes etapas, para el caso del periodo de tiempo que se esta teniendo en cuenta en el presente documento, las acciones planteadas son, para el 2019 y 2020 únicamente, en el sector industrial, se estableció el proyecto \textit{Uso de sistemas de control
 de emisiones}, para los años 2012 al 2020, en cuestiones de transporte, se debían implementar los proyectos \textit{Uso de sistemas de control de emisiones en vehículos de transporte de carga}, y \textit{Uso de sistemas de control 
 de emisiones en motocicletas} y para el periodo comprendido entre 2011 y 2020 el proyecto \textit{Implementación del sistema
 integrado de transporte
 público}. 
-Buscando que, de acuerdo con las proyecciones y con los proyectos establecidos, la tendencia de contaminación del material particulado, por ejemplo, muestre el comportamiento mostrado en la figura \ref{proyeccionplandecenal}
-
-\begin{figure}[hbt!]
-\begin{center}
-\includegraphics[width=13cm]{proyeccionplandecenal}
-\end{center}
-\centering
-\caption{ Emisiones de material particulado entre 2008 y 2020, en los escenarios de tendencia versus el plan de descontaminación, tomado del plan decenal de descontaminación del aire de Bogotá \cite{plandecenal}. }
-\label{proyeccionplandecenal}
-\end{figure}
 
 En la ciudad de Bogotá, se han reducido los niveles de concentración de $PM_{10}$ y $PM_{2.5}$ entre los años de 2012 y 2017 gracias a las propuestas implementadas en el plan decenal de decontaminación del aire para Bogotá, como por ejemplo la integración del transporte público SITP y la descontinuación de algunas busetas que no cumplían con las características establecidas para contrarrestar la contaminación; el seguimiento y control en la industria, aumento en los días sin carro, entre otras.
 Puntualmente, para el caso del $PM_{10}$ y el $PM_{2.5}$ su primer punto de cambio ocurre al rededor del dato 400, el cual corresponde a una fecha aproximada al 4 de febrero del 2019, este cambio se puede explicar en parte, por la resolución 383 del año 2019 \cite{res2019}, en la cual se declara alerta amarilla porque el material particulado excede los umbrales máximos permitidos. Así mismo, para el caso del Ozono, sucede algo similar solo que su primer punto de cambio ocurre en marzo del 2018, cuando en la resolución 831 de 2018 \cite{res2018} también es decretada la alerta amarilla por contaminación ambiental y se establecen algunas restricciones en la ciudad de Bogotá, como por ejemplo establecer  restricciones en el sector de transporte y movilidad y restringir la operaciones de fuentes fijas industriales que operan con combustibles sólidos y líquidos. 
 
+En el año 2020, para los meses de febrero y marzo se decretó  alerta amarilla en la ciudad de Bogotá, por medio del decreto 077 del 4 de marzo de 2020 \cite{dec20202} y \cite{dec2020}, el cual esta relacionado con la restricción de vehiculos de carga, dado que los niveles de concentración de material particulado se encontraban elevados en algunas estaciones de monitoreo y por esta fecha se estaban presentando incendios forestales, aun cuando la movilidad se empezaba a restringir a causa de la pandemia ocasionada por el Covid 19. 
  

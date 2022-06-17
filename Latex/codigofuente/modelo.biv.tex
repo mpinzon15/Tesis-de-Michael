@@ -1,0 +1,123 @@
+\chapter{Modelos univariados para los pares de los contaminantes  $PM_{10}, PM_{2.5}$ y $O_3$}
+
+
+\section{Correlación de dos procesos estocásticos}
+
+En el presente capitulo se realizará la aplicación del modelo bivariado, haciendo uso de la función cópula construida para determinar el parámetro $\theta$ que describirá la correlación entre los dos procesos estocásticos en cuestión. Para este caso partícular se revisará de la siguiente manera: 
+\begin{enumerate}
+\item $PM_{10}$ vs $O_3$
+\item $PM_{2.5}$ vs $O_3$
+\item $PM_{10}$ vs $PM_{2.5}$
+\end{enumerate}
+
+Como primer paso se realizará una prueba que valide el funcionamiento correcto del modelo, para esto se realizará la simulación para el Ozono versus él mismo, para esto, se determinan los parámetros de las distribuciones a priori de la siguiente manera:Se retoma la información de la tabla \ref{infoestad} particularmente la media y la desviación estandar, con estos dos datos y sabiendo que para la distribución uniforme con parámetros $(a,b)$ se tiene: 
+
+$$E(x)=\frac{(a+b)}{2}\hspace{2cm} Var(x)=\frac{(b-a)^2}{12} $$
+
+De esta manera es inmediato identificar los valores de $a$ y $b$
+$$1.21=\frac{(a+b)}{2}\hspace{2cm} (0.03)^2=\frac{(b-a)^2}{12} $$
+Luego entonces, para el parámetro $\a$ los valores son $a=1.16$ y $b=1.26$, de manera análoga se realizan los cálculos para el parámetros $\b$ y también para los otros dos contaminantes. Al ejecutar el programa de computo se obtienen los siguientes resultados:
+
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+& \multicolumn{5}{c|}{Información estadística $O_3$ vs $O_3$} \\
+\cline{2-6}
+Modelo & Parámetros & dist. inicial  & Media & sd  &   intervalo $95 \%$\\
+\hline \hline
+\multirow{5}{1.5cm}{Sin puntos de cambio } & $\theta$ & $unif(-1,1)$ & \textcolor{blue}{$0.9487761$} & $0.004088$ & $(0.8906871 ;0.9570268 )$ \\ \cline{2-6}
+& $\a_1$& $unif(1.2,1.3)$ & $1.2000047$ & $0.0000497$ & $( 1.2000001;1.2000183)$\\  \cline{2-6}
+& $\b_1$& $unif(10.9,15.8)$ & $13.3206233$ & $0.10380$ & $(13.1292662;13.5385384)$\\  \cline{2-6}
+& $\a_2$& $unif(1.2,1.3)$ & $1.2000047$ & $0.0000465$ & $(1.2000001;1.2000163)$\\  \cline{2-6}
+& $\b_2$& $unif(10.9,15.8)$ & $13.3157448$ & $0.10250$ & $(13.1135846;13.5139078)$\\  \cline{1-6}
+
+\end{tabular}
+\caption{Prueba del modelo bivariado}
+\label{infoestad_prueba}
+\end{table}
+
+Como se puede observar en la tabla \ref{infoestad_prueba} el parámetro $\theta$ arroja un valor muy cercano a $1$ lo cual consistente y tiene sentido pues los datos estudiados son exactamente iguales, esta prueba genera confianza para poder determinar la correlación, ahora sí, entre cada par de contaminantes. 
+
+\newpage
+\subsection{Correlación, $\theta$, entre los contaminantes $PM_{10}$ y $O_3$ }
+
+En esta sección se presentan los resultados obtenidos al ejecutar el modelo que relaciona el material particulado de 10 micras de tamaño, junto con el ozono. 
+
+Como distribución a priori se elige, uniforme con parámetros $a,b$ y estos valores fueron encontrados tal como se mencionó anteriormente. La tabla \ref{infoestad_PM10_Oz} resume los resultados obtenidos para estos dos procesos estocásticos. 
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+& \multicolumn{5}{c|}{Información estadística $PM_{10}$ y $O_3$ } \\
+\cline{2-6}
+Modelo & Parámetros & dist. inicial  & Media & sd  &   intervalo $95 \%$\\
+\hline \hline
+\multirow{5}{1.5cm}{Sin puntos de cambio }  & $\theta$ & $unif(-1,1)$ & $-0.9999994$ & $0.0000069$ & $(-1.0000000;-0.99999758 )$ \\ \cline{2-6}
+& $\a_1$& $unif(0.803,0.977)$ & $0.8030031$ & $0.0002969$ & $( 0.8030001;0.8030110)$\\  \cline{2-6}
+& $\b_1$& $unif(0.6,2.9)$ & $0.6000459$ & $0.000472$ & $(0.6000013;0.6001711)$\\  \cline{2-6}
+& $\a_2$& $unif(1.2,1.3)$ & $1.2000027$ & $0.0000277$ & $(1.2000001;1.2000100)$\\  \cline{2-6}
+& $\b_2$& $unif(10.9,15.8)$ & $15.4519679$ & $0.000493$ & $(15.3486982;15.5417151)$\\  \cline{1-6}
+\end{tabular}
+\caption{Correlación entre los contaminantes $PM_{10}$ y $O_3$  }
+\label{infoestad_PM10_Oz}
+\end{table}
+
+Para este primer análisis, el resultado del parámetro $\theta$ arroja un resultado completamente correlacionado negativamente, pues su valor medio fue $-0.9999994$, esto lo que indica es que, con una alta probabilidad, el aumento de la contaminación de $PM_{10}$ afecta de manera inversa a la concentración de partículas de $O_3$ en el aire. 
+Por otra parte en la tabla \ref{infoestad_PM10_Oz} se puede observar que el intervalo de confianza es reducido, esto se puede explicar, porque los parámetros de las distribuciones iniciales también lo son, principalmente los $\a_i$ de cada uno de los contaminantes. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\subsection{Correlación, $\theta$, entre los contaminantes $PM_{2.5}$ y $O_3$ }
+
+En la tabla \ref{infoestad_PM2.5_Oz}, se muestran los resultados obtenidos al ejecutar el código en R, se observa aquí algo interesante y es que la correlación es negativa y casi perfecta. Lo que quiere decir esto, es que a medida que los niveles de concentración de material partóculado de $2.5 \mu m$ de tamaño, los niveles de concentración de ozono disminuyen.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+& \multicolumn{5}{c|}{Información estadística $PM_{2.5}$ y $O_3$} \\
+\cline{2-6}
+Modelo & Parámetros & dist. inicial  & Media & sd  &   intervalo $95 \%$\\
+\hline \hline
+\multirow{5}{1.5cm}{Sin puntos de cambio } & $\theta$ & $unif(-1,1)$ & $0.9487761$ & $0.004088$ & $(0.8906871 ;0.9570268 )$ \\ \cline{2-6}
+& $\a_1$& $unif(1.2,1.3)$ & $1.2000047$ & $0.0000497$ & $( 1.2000001;1.2000183)$\\  \cline{2-6}
+& $\b_1$& $unif(10.9,15.8)$ & $13.3206233$ & $0.10380$ & $(13.1292662;13.5385384)$\\  \cline{2-6}
+& $\a_2$& $unif(1.2,1.3)$ & $1.2000047$ & $0.0000465$ & $(1.2000001;1.2000163)$\\  \cline{2-6}
+& $\b_2$& $unif(10.9,15.8)$ & $13.3157448$ & $0.10250$ & $(13.1135846;13.5139078)$\\  \cline{1-6}
+
+\end{tabular}
+\caption{Correlación entre los contaminantes $PM_{10}$ y $O_3$  }
+\label{infoestad_PM2.5_Oz}
+\end{table}
+\newpage
+
+
+
+\subsection{Correlación, $\theta$, entre los contaminantes $PM_{2.5}$ y $PM_{10}$ }
+
+El material particulado dentro del análisis presenta justo lo que se espera, pues por tratarse del mismo contaminante pero con distinto tamaño, se espera que los resultados de uno, de alguna manera, estan contenidos dentro del otro, esto significa que su correlación debe ser casi perfecta, y es justo lo que se puede observar en la tabla \ref{infoestad_PM10_PM2.5} donde el valor $\theta$ dio un resultado casi igual a $1$  
+ 
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+& \multicolumn{5}{c|}{Información estadística $PM_{2.5}$ y $PM_{10}$ } \\
+\cline{2-6}
+Modelo & Parámetros & dist. inicial  & Media & sd  &   intervalo $95 \%$\\
+\hline \hline
+\multirow{5}{1.5cm}{Sin puntos de cambio }
+ & $\theta$ & $unif(-1,1)$ & $0.9988635$ & $0.00111912$ & $(0.9960436;0.9999755)$ \\ \cline{2-6}
+& $\a_1$& $unif(1,3)$ & $0.6689893$ & $0.000686$ & $(0.6957702; 0.6984232)$\\  \cline{2-6}
+& $\b_1$& $unif(10,16)$ & $10.000715$ & $0.0000121$ & $(10.0000144;10.0026233 )$\\  \cline{2-6}
+& $\a_2$& $unif(1,3)$ & $0.7476368 $ & $0.0000039$ & $(1.1000001; 1.1000148)$\\  \cline{2-6}
+& $\b_2$& $unif(10,16)$ & $10.000687$ & $0.000154$ & $(10.0000189;10.0024789)$\\  \cline{1-6}
+
+\end{tabular}
+\caption{Correlación entre los contaminantes $PM_{10}$ y $PM_{2.5}$  }
+\label{infoestad_PM10_PM2.5}
+\end{table}
+

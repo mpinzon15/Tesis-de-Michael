@@ -1,5 +1,220 @@
-\chapter{Antecedentes}
+\chapter{Preliminares}
 
-En el presente trabajo de grado, son necesarios algunos resultados importantes del curso Inferencia Bayesiana, es por eso que a continuación se presentan algunas deficiones y teoremas que son de gran utilidad para poder encontrar los diferentes parámetros que modelan los diferentes contaminantes y su respectiva correlación. 
+\section{Inferencia bayesiana}
+En el presente trabajo de grado, son necesarios algunos resultados importantes del curso Inferencia Bayesiana, es por eso que a continuación se presentan algunas definiciones y teoremas que son de gran utilidad para poder encontrar los diferentes parámetros que modelan los diferentes contaminantes y su respectiva correlación. 
 
-\section{Función de máxima verosimilitud.}
+
+
+%Se llama inferencia bayesiana a esa parte de la estadística que se encarga de utilizar la información conocida, los datos observados, la experiencia, la genética, etc., para poder hablar del futuro haciendo uso de la probabilidad. 
+%Esto lo hace utilizando el teorema de bayes, el cual permite actualizar la probabilidad a medida que se obtienen nuevos datos. 
+
+El análisis de datos Bayesiano es el nombre que se le da a cada uno de los métodos prácticos que se construyen para hacer inferencias a partir de datos conocidos, utilizando modelos de probabilidad \cite{infe_bayes}. Gracias a la experiencia o al conocimiento previo sobre algún tema particular, se pueden construir modelos que permiten realizar inferencias y tomar desiciones futuras, siempre enfocados en la mejora continua de los procesos. 
+
+A este conocimiento previo se le denomina distribución a priori $P(\theta)$, cuya definición es una representación por medio de distribuciones de frecuencia que dependen de los datos ya conocidos. 
+
+En el presente trabajo de grado, el interés está en encontrar conclusiones sobre la relación que tienen, dos a dos, tres contaminantes elegidos y de los cuales se tiene una información previa que en este caso será la experiencia necesaria para hacer uso de la teoria Bayesiana y enfocar el objetivo principal que será identificar la correlación entre dos procesos estocásticos. Esto se podrá hacer, siempre y cuando se establezca un modelo para cada uno de los tres contaminantes y también para los pares, para hacerlo, se utiliza la siguiente notación, $\theta$ denota cantidades de vectores no observables o parámetros poblacionales de interés y  $X$ los datos observados o conocidos con lo cuales se construirá el modelo, para este caso, el número de excedencias de los tres contaminantes durante los tres años analizados. 
+
+En este sentido, la inferencia bayesiana se encargará de realizar conclusiones estadísticas sobre el parámetro $\theta$ a través de la probabilidad condicional, lo cual se escribe simplemente como $P(\theta | X$) \cite{infe_bayes}. En adelante, la expresión $p(\cdot|\cdot)$
+denota una densidad de probabilidad condicional cuyos argumentos se podrán inferir del contexto  
+
+\section{Teorema de Bayes}
+
+En \cite{infe_bayes}, Gelman, A. et al, hacen una descripción un tanto sencilla para comprender lo que aporta a esta inverstigación, el teorema de Bayes, pues mencionan que para formular enunciados de probabilidad sobre $\theta$ dado $X$ se debe iniciar con un modelo que proporcione una distribución de probabilidad conjunta para $\theta$ y $X$. 
+La función de densidad de probabilidad conjunta, como se menciona en \cite{infe_bayes} se puede escribir como el producto de dos densidades, la distribución a priori $P(\theta)$ y la distribución de muestreo $p(X|\theta)$ esto es: 
+\begin{center}
+\begin{equation}
+p(\theta,X)=p(\theta)p(X|\theta)
+\label{densidad}
+\end{equation}
+\end{center}
+
+Aqui, aplicando la definición de probabilidad condicional a la ecuación \ref{densidad}, se obtiene lo siguiente:
+
+\begin{center}
+\begin{equation}
+p(\theta|X)=\frac{p(\theta,X)}{p(X)}=\frac{p(\theta)p(X|\theta)}{p(X)}
+\label{densidad_posterior}
+\end{equation}
+\end{center}
+
+En la cual $p(X)=\sum_{\theta}p(\theta)p(X|\theta)$ para el caso discreto y $p(X)=\int p(\theta)p(X|\theta)d\theta $ en el caso continuo de $\theta$. 
+
+Una forma equivalente a la ecuación \ref{densidad_posterior} no tiene en cuenta el factor $p(X)$, dado que este no depende de $\theta$ y con $X$ fijo, se puede considerar una constante, esto produce la \textit{densidad posterior no normalizada} \cite{infe_bayes}: 
+
+\begin{equation}
+p(\theta|y)\propto p(\theta)p(y|\theta)
+\label{densidad_posterior_no_norm}
+\end{equation}
+
+Antes de que los datos $X$ sean considerados, la distribución de lo desconocido pero observado $X$, es: 
+
+\begin{equation}
+p(X)=\int p(X|\theta)d\theta=\int p(\theta)p(X|\theta)d\theta
+\label{priori}
+\end{equation}
+
+La ecuación \ref{priori} es conocida como la \textit{distribución marginal de $X$} sin embargo un nombre que la describe mejor es \textit{distribución predictiva a priori}, priori, porque no esta condicionada a una observación previa del proceso y predictiva porque es la distribución para una cantidad que es observable. 
+
+Ya una vez se tienen los datos $X$ observados, se pueden predecir datos observables desconocidos, $ \widetilde{X}$, la distribución de estos datos es llamada \textit{distribución predictiva posterior}, posterior porque esta condicionada a los $X$ observados y predictiva porque es una predicción para los $ \widetilde{X}$ observables. 
+
+\begin{equation} \label{posterior}
+\begin{split}
+p(\widetilde{X}|X) & = \int p(\widetilde{X},\theta|X)d\theta \\
+ & = \int p(\widetilde{X}|\theta,X)p(\theta|X)d\theta\\
+ & = \int p(\widetilde{X}|\theta)p(\theta|X)d\theta
+\end{split}
+\end{equation}
+
+Cuando se observa $X_1, X_2, \dots X_n$, estos datos ya no representan una variable aleatoria, de esta manera la distribución $p(x|\theta)$ se convierte en una función solo de $\theta$. A esta función se le conoce como \textit{verosimilitud} y se denota al igual que en \cite{tesisbiviana} como $L(D|\theta)$.
+
+Dado que el presente trabajo de grado es una consecuencia de la tesis de doctorado de Suarez, B. (2020) \cite{tesisbiviana}, la notación referente a los datos observados es la misma, por la tanto aquí también, si $N$ es el número total de excedencias de alguno de los tres contaminantes estudiados, localizados en los días $D={d1, d2, \dots , d_N}$ y $\theta$ el parámetro desconocido del modelo, entonces de la formula de Bayes se tiene qué: 
+
+\begin{equation}
+\label{verosimilitud}
+p(\theta|D)=\frac{p(D|\theta)p(\theta)}{p(D)}\propto L(D|\theta)p(\theta)=\prod_{i=1}^N p(d_i|\theta)p(\theta)
+\end{equation} 
+
+
+\section{Método Monte Carlo vía Cadenas de Markov (MCMC)[Jiménez (2015)]} 
+
+Los métodos MCMC, cuyas siglas provienen de su nombre en inglés: \textit{Markov Chain Monte Carlo}, son algoritmos que simulan el comportamiento de variables aleatorias para poder estimar parámetros desconocidos de las funciones de probabilidad de dichas variables. En el presente trabajo de grado se realizará la inferencia sobre la función aposteriori, $p(\theta|X)$
+
+En \cite{MCMC} se presentan los siguientes dos pasos sobre la aplicación de las técnicas MCMC: 
+
+\begin{enumerate}
+\item Generar una muestra $X_1, \dots, X_n$ mediante una cadena de Markov cuya distribución estacionaria sea la buscada. 
+\item Tomar medias muestrales (integración Monte Carlo) y realizar inferencias sobre la muestra. Para construir estas cadenas de Markov, existen dos familias de algoritmos que son: El algoritmo de Metropolis-Hastings y el muestreo de Gibbs, los cuales serán descritos a continuación. 
+\end{enumerate}
+\subsection{Algoritmo de Metropolis Hastings}
+
+Suárez, B. (2020), en \cite{tesisbiviana} cita a Metropolis (1949), Hastings (1970) de la siguiente manera: 
+
+Sea $f(\cdot)$ una distribución de la cual se quiere generar valores, pero que no es posible hacerlo directamente. El algoritmo Metropolis-Hastings dice que apartir de una distribución condicional $q(y|x)$, de la que se puede generar valores facilmente, se crea una secuencia de observaciones $X_1$, $X_2$, $\dots,$ cuya distribución estacionaria es $f(\cdot)$. El algoritmo es: 
+
+Sea $X_0=x_0$ el valor inicial, generado a partir de una distribución inicial adecuada. Para $n=0,1,2,\dots,$ si el estado actual es $X_n=x$, se obtiene $X_{n+1}$ así: 
+
+\begin{enumerate}
+\item Se genera un valor candidato $y$ usando $q(\cdot | X_n=x)$
+\item Se evalúa $\a(x,y)=min \left[ \frac{f(y)q(x/y)}{f(x)q(y/x)},1\right]$
+
+\item Asigne el valor a $X_{n+1}$ de la siguiente manera: 
+
+\begin{displaymath}
+X_{n+1} = \left\{ \begin{array}{l}
+y \text{ con probabilidad } \a(x,y) \\
+x \text{ con probabilidad } 1-\a(x,y) 
+\end{array}
+\right.
+\end{displaymath}
+\end{enumerate}
+
+Aquí, para ejecutar el paso 3, se genera $U$ usando una distribución $uniforme(0,1)$ si $U<\a, X_{n+1}=y;$ en otro caso $X_{n+1}=x$
+
+
+\subsection{Muestrador de Gibbs}
+
+Sea $X=X_1, X_2, \dots ,X_{k-1}$ un vector aleatorio. El muestreador de Gibbs, arroja un resumen inferencia de la distribución conjunta $p(X)=p(X_1,X_2,\dots,X_k)$. Suponga que sea relativamente fácil generar valores de las funciones de densidad condicional completas denotadas por $p(X_1|X_2, \dots , X_k), p(X_i|X_1,\dots,X_{i-1},X_{i+1}), \dots ,X_k),$ para $i=2,\dots,k-1$ y $p(X_k|X_1,\dots,X_{k-1})$.
+
+Dado un bector inicial $X^{(0)}=(X_1^{(0)},X_2^{(0)}),\dots,X_k^{(0)}$ obtenido de acuerdo a alguna distribución adecuadad, se implementa el siguiente proceso iterativo. 
+
+Para $n=1,2,\dots,$ sea $X^{(n-1)}=(X_1^{(n-1)},\dots,X_k^{(n-1)})$, entonces 
+
+\begin{enumerate}
+\item Genere $X_1^{(n)}$ usando $P(\cdot|X_2^{n-1},\dots,X_k^{n-1})$
+
+\item Para $i=2,3,\dots,k-1,$ genere $X_i^n$ usando $P(\cdot |X_1^{(n)},\dots,X_{i-1}^{(n)},X_{i+1}^{(n)},\dots,X_{k}^{(n-1)})$
+
+\item genere $X_k^{(n)}$ usando $P(\cdot | X_1^{(n)},\dots,X_{k-1}^{(n)})$,
+
+\item Haga $X^{(n)}=(X_1^{(n)},\dots,X_k^{(n)})$ y regrese al ítem 1, con $n$ en el lugar de $n-1$ y $n+1$ en lugar de $n$.
+
+La sucesión $X^{(1)},X^{(2)},...,$ con $X^{(i)}=(X_1^{(i)},X_2^{(i)},\dots,X_k^{(i)}), \text{  } i=1,2,\dots$ es una realización de una cadena de Markov cuya distribución de transición está dada por: 
+
+
+\begin{equation} \label{gibbs}
+\begin{split}
+P(X^{(t+1)}|X^{(t)}) & = p(X_1^{(t+1)}|X_2^{(t)},\dots,X_k^{(t)} ) \\
+ & \times \prod_{i=2}^{k-1}p(X_i^{(t+1)}|X_1^{(t+1)},\dots,X_{i-1}^{(t+1)},X_{i+1}^{(t)},\dots,X_{k-1}^{(t)}) 
+ \\
+ & \times p(X_{k}^{(t+1)}|X_{1}^{(t+1)},\dots,X_{k-1}^{(t+1)}),
+\end{split}
+\end{equation}
+
+
+Lo cual bajo condiciones adecuadas converge a $f(\cdot)$ cuando $n$ tiende a infinito. 
+\end{enumerate}
+
+\section{Algunos diagnósticos de convergencia para los parámetros estimados}
+
+
+
+
+Como ya se mencionó, para la elaboración del presente trabajo de grado, se generan cadenas de Markov para estimar los parámetros deseados. En esta sección se presentan algunos criterios que permiten generar confianza en los modelos, pues se evalua mediante su convergencia si son fiables o no. A continuación se presentan algunas de estas pruebas de convergencia:
+
+ 
+
+\subsection{Método Geweke [Geweke (1992)]}
+
+Geweke, J. (1992), \cite{geweke} citado por Suárez, B. (2020) \cite{tesisbiviana}  brinda un diagnóstico de convergencia en el cual establece que si el comportamiento del $10\%$ inicial de la cadena de Markov inicial es igual al $50\%$ final, entonces el estadístico de Geweke tiene una distribución normal estándar asintótica, es decir, $Z_n$, es tal que cuando $n\rightarrow \infty$ su distribución es una normal con parámetros $(0,1)$, aquí:
+
+
+\begin{equation}
+\label{estadistico}
+Z_n=\frac{\sqrt{T}(\mu_A-\mu_B)}{\sqrt{\frac{\s_A^2}{r_A}+\frac{\s_B^2}{r_B}}}
+\end{equation}
+
+Con $T$ el número de iteraciones, $\mu_A$, $\mu_B$ medias y $\s_A^2$, $\s_B^2$ varianzas del primer y último segmento respectivamente, además $T_A=r_AT$ y  $T_B=r_BT$ con $r_A$ y $R_B$ proporciones de la longitud de la cadena del primer y último segmento. 
+
+
+\subsection{Método Heidelberger-Welch}
+
+Este modelo calcula un test estadístico para aceptar o rechazar la hipotesis nula de que la cadena de Markov corresponde a una distribución estacionaria. El método consiste de dos partes, en la primera se establece una cadena de $N$ iteraciones y se analiza, mediante el estadístico de prueba, si la cadena es estacionaria o no, cuando la hipotesis nula es rechazada, se descarta el $10\%$ inicial de la cadena y se repite el proceso, esto se hace hasta que la hipotesis nula es aceptada o hasta llegar al $50\%$ de la cadena. Si no se puede aceptar la hipotesis nula se dice que la cadena falla y que se debe elegir un mayor número de iteraciones. 
+
+En la segunda parte del test, cuando la cadena o una parte de ella pasó la primera parte, se calcula el error estándar de la media y se calcula un intervalo de confianza para la media. 
+
+Si la mitad del ancho de este intervalo de confianza construido es menor que un $\epsilon$ se puede decir que el tamaño de la nueva cadena es suficiente para estimar la media con precisión. \cite{romo}
+
+\subsection{Método Gelman and Rubin}
+
+En 1992, Gelman and Rubin plantearon una prueba de convergencia para determinar la veracidad de los parámetros estimados mediante cadenas de Markov. Este criterio de convergencia, consiste analizar $n$ cadenas independientes, 
+y esta basado en estimar las varianzas $\s ^2 $ de $\theta$ por medio de un estimador $V$, el cual es construido promediando los estimadores obtenidos en cada cadena de Markov. Matemáticamente hablando, El Adlouni et al. (2006), citando a Gelman and Rubin (2006), presentan en \cite{adlouni} una descripción del algoritmo: 
+
+Denotan, en primer lugar, $\theta_i^t=\theta(x_i^t)$ como la funcional evaluada en le $t-esima$ observación de la cadena $i$,
+
+\begin{equation}
+\overline{\theta}_i^{.}=\frac{1}{n}\sum_{t=n+1}^{2n} \theta_i^t , \overline{\theta}_{.}^{.}=\frac{1}{m} \sum_{i=1}^m \overline{\theta}_i^{.}, s_i^2=\frac{1}{n-1} \sum_{t=n+1}^{2n}(\theta_i^t-\overline{\theta}_i^{.})^2
+\end{equation}
+
+A partir de lo anterior, en \cite{adlouni} definen el estimador de ka siguiente manera: 
+
+\begin{equation}
+V=\frac{n-1}{W}+\left(1+\frac{1}{m}\right)\frac{B}{n}
+\end{equation}
+
+Donde $\frac{B}{n}$ representa las medias de la secuencia $m$ y es de la siguiente forma: 
+\begin{equation}
+\frac{B}{n}=\frac{1}{m-1}\sum_{i=1}^m(\theta_i^{.}-\overline{\theta}_{.}^{.})^2,
+\end{equation}
+
+$W$, es la media de las $m$ varianzas de la secuencia, $s_i^2$ y esta dada por: 
+
+\begin{equation}
+W=\frac{1}{m}\sum_{i=1}^m s_i^2
+\end{equation} 
+
+Con la información anterior, es posible construir un estimador $R_c$, el cual según Gelman and Rubin (1998), citados en \cite{adlouni}, si tiene valores muy grandes, hay dos posibilidades. 
+
+\begin{enumerate}
+\item La varianza $V$ se puede disminuir para mas simulaciones. 
+
+\item $W$ puede disminuir para mas simulaciones. 
+\end{enumerate}
+
+En cambio, si el estimador de Gelman y Rubin, se encuentra cerca de 1, se puede concluir que cada una de los $m$ conjuntos de n sumulaciones observadas esta cerca de la simulación objetivo. 
+
+
+\subsection{Método Raftery and Lewis} 
+
+Raftery and Lewis (1992), proponen un método apropiado para determinar el número de iteraciones necesarias para calcular un quantil de la cadena de markov construida. Además analizan la longitud de ejecuación para que la probabilidad resultante se encuentre en un intervalo $[q-\epsilon,q+\epsilon]$,  esta presición requerida $\epsilon$ se encuentra con una probabilidad $(1-\alpha$  \cite{Roy}
+
+En el software R, por medio de la función \textit{Raftery.Diagnostic} se obtienen los resultados de este criterio de convergencia, uno de estos resultados es la matriz \textit{resmatrix} en la cual se observan los resultados: burn-in sugerido,un número $N$ que es el número de iteraciones realizadas, un $N_min$ que es el número minimo de iteraciones sugeridas y un factor de dependencia $I$ el cual es determinado de la siguiente manera: $I=\frac{N}{N_{min}}$, el cual tiene la siguiente interpretación: $I>5$ indica que  hay relación de dependencia entre cada uno de los estados de la cadena, sugiriendo entonces que se deben modificar algunos de los valores propuestos en el modelo. \cite{tesisbiviana}, \cite{Rdoc}
