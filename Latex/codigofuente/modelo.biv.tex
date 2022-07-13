@@ -65,7 +65,16 @@ Modelo & Parámetros & dist. inicial  & Media & sd  &   intervalo $95 \%$\\
 \end{table}
 
 Para este primer análisis, el resultado del parámetro $\theta$ arroja un resultado completamente correlacionado negativamente, pues su valor medio fue $-0.9999994$, esto lo que indica es que, con una alta probabilidad, el aumento de la contaminación de $PM_{10}$ afecta de manera inversa a la concentración de partículas de $O_3$ en el aire. 
-Por otra parte en la tabla \ref{infoestad_PM10_Oz} se puede observar que el intervalo de confianza es reducido, esto se puede explicar, porque los parámetros de las distribuciones iniciales también lo son, principalmente los $\a_i$ de cada uno de los contaminantes. 
+Por otra parte en la tabla \ref{infoestad_PM10_Oz} se puede observar que el intervalo de confianza es reducido, esto se puede explicar, porque los parámetros de las distribuciones iniciales también lo son, principalmente los $\a_i$ de cada uno de los contaminantes. Para representar esta información de forma gráfica, se realizaron las curvas de nivel que se observan en la figura \ref{curv_niv_pm10_03}. En esta imagen, de color gris se representa la suma de los datos observados de $PM_{10}$ y $O_3$, las graficas de color verde y azul, representan el intervalo de confianza estimado para la función $m(t_1,t_2$ y la grafica de color verde, representa la estimación propuesta. Este análisis se realiza sin tener en cuenta algún punto de cambio, al igual que en el modelo univariado, si se empiezan a tener en cuenta, los resultados iran siendo óptimos en su proceso.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=1]{cdnpm10vs03}
+\end{center}
+\centering
+\caption{Curvas de nivel para los contaminantes $PM_{10}$ y $0_3$. \cite{EPA}}
+\label{curv_niv_pm10_03}
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -83,11 +92,11 @@ En la tabla \ref{infoestad_PM2.5_Oz}, se muestran los resultados obtenidos al ej
 \cline{2-6}
 Modelo & Parámetros & dist. inicial  & Media & sd  &   intervalo $95 \%$\\
 \hline \hline
-\multirow{5}{1.5cm}{Sin puntos de cambio } & $\theta$ & $unif(-1,1)$ & $0.9487761$ & $0.004088$ & $(0.8906871 ;0.9570268 )$ \\ \cline{2-6}
-& $\a_1$& $unif(1.2,1.3)$ & $1.2000047$ & $0.0000497$ & $( 1.2000001;1.2000183)$\\  \cline{2-6}
-& $\b_1$& $unif(10.9,15.8)$ & $13.3206233$ & $0.10380$ & $(13.1292662;13.5385384)$\\  \cline{2-6}
-& $\a_2$& $unif(1.2,1.3)$ & $1.2000047$ & $0.0000465$ & $(1.2000001;1.2000163)$\\  \cline{2-6}
-& $\b_2$& $unif(10.9,15.8)$ & $13.3157448$ & $0.10250$ & $(13.1135846;13.5139078)$\\  \cline{1-6}
+\multirow{5}{1.5cm}{Sin puntos de cambio } & $\theta$ & $unif(-1,1)$ & $-0.9999321$ & $0.000678$ & $(-0.9999980 ;-0.9997630 )$ \\ \cline{2-6}
+& $\a_1$& $unif(1.2,1.3)$ & $0.7645434$ & $0.0000206$ & $( 0.7596495;0.7696293)$\\  \cline{2-6}
+& $\b_1$& $unif(10.9,15.8)$ & $5.0000769$ & $0.00808$ & $(5.0000019;5.0002863)$\\  \cline{2-6}
+& $\a_2$& $unif(1.2,1.3)$ & $0.6867448$ & $0.0000248$ & $(0.6820837;0.6916936)$\\  \cline{2-6}
+& $\b_2$& $unif(10.9,15.8)$ & $5.0000812$ & $0.00808$ & $(5.0000025;5.0003026)$\\  \cline{1-6}
 
 \end{tabular}
 \caption{Correlación entre los contaminantes $PM_{10}$ y $O_3$  }
@@ -95,11 +104,22 @@ Modelo & Parámetros & dist. inicial  & Media & sd  &   intervalo $95 \%$\\
 \end{table}
 \newpage
 
+Al igual que en el caso anterior, a la información contenida en la tabla \ref{infoestad_PM2.5_Oz} se le realizó la respectiva representación por medio de curvas de nivel, essta información se puede observar en la figura \ref{curv_niv_pm25_03}, en ella se puede observar el ajuste del modelo, similar a como ocurria en el modelo univariado, donde los datos se ajustaban de buena manera, en el inicio de los días analizados, pero que luego, por los puntos de cambio el modelo se aleja un poco.
+
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=1]{cdn_ozpm25}
+\end{center}
+\centering
+\caption{Curvas de nivel para los contaminantes $PM_{2.5}$ y $0_3$. \cite{EPA}}
+\label{curv_niv_pm25_03}
+\end{figure}
 
 
 \subsection{Correlación, $\theta$, entre los contaminantes $PM_{2.5}$ y $PM_{10}$ }
 
-El material particulado dentro del análisis presenta justo lo que se espera, pues por tratarse del mismo contaminante pero con distinto tamaño, se espera que los resultados de uno, de alguna manera, estan contenidos dentro del otro, esto significa que su correlación debe ser casi perfecta, y es justo lo que se puede observar en la tabla \ref{infoestad_PM10_PM2.5} donde el valor $\theta$ dio un resultado casi igual a $1$  
+El material particulado dentro del análisis presenta justo lo que se espera, pues por tratarse del mismo contaminante pero con distinto tamaño, se espera que los resultados de uno, de alguna manera, estan contenidos dentro del otro, esto significa que su correlación debe ser positiva y cercana a 1, y es justo lo que se puede observar en la tabla \ref{infoestad_PM10_PM2.5} donde el valor $\theta$ dio un resultado de $0.7546785$, esto continua resultados interesantes dentro del estudio porque concuerda con lo esperado.
  
 \begin{table}[!h]
 \centering
@@ -110,14 +130,25 @@ El material particulado dentro del análisis presenta justo lo que se espera, pu
 Modelo & Parámetros & dist. inicial  & Media & sd  &   intervalo $95 \%$\\
 \hline \hline
 \multirow{5}{1.5cm}{Sin puntos de cambio }
- & $\theta$ & $unif(-1,1)$ & $0.9988635$ & $0.00111912$ & $(0.9960436;0.9999755)$ \\ \cline{2-6}
-& $\a_1$& $unif(1,3)$ & $0.6689893$ & $0.000686$ & $(0.6957702; 0.6984232)$\\  \cline{2-6}
-& $\b_1$& $unif(10,16)$ & $10.000715$ & $0.0000121$ & $(10.0000144;10.0026233 )$\\  \cline{2-6}
-& $\a_2$& $unif(1,3)$ & $0.7476368 $ & $0.0000039$ & $(1.1000001; 1.1000148)$\\  \cline{2-6}
-& $\b_2$& $unif(10,16)$ & $10.000687$ & $0.000154$ & $(10.0000189;10.0024789)$\\  \cline{1-6}
+ & $\theta$ & $unif(-1,1)$ & $0.7546785$ & $0.008007$ & $(0.7390866;0.7693154 )$ \\ \cline{2-6}
+& $\a_1$& $unif(1,3)$ & $1.0000078$ & $0.000789$ & $(1.0000002; 1.0000301)$\\  \cline{2-6}
+& $\b_1$& $unif(7,20)$ & $8.0001299$ & $0.000129$ & $(8.0000029;8.0004811 )$\\  \cline{2-6}
+& $\a_2$& $unif(1,3)$ & $1.0000105$ & $0.0000981$ & $(1.0000003; 1.0000364)$\\  \cline{2-6}
+& $\b_2$& $unif(7,20)$ & $8.0001377$ & $0.0001347$ & $(8.0000046;8.0005117)$\\  \cline{1-6}
 
 \end{tabular}
 \caption{Correlación entre los contaminantes $PM_{10}$ y $PM_{2.5}$  }
 \label{infoestad_PM10_PM2.5}
 \end{table}
 
+Para este par de contaminantes también se construyeron las curvas de nivel, figura \ref{curv_niv_pm10_pm25}, que asocian estos resultados. 
+En este caso el modelo se ajusta de manera adecuada y de forma similar a los pares estudiados anteriormente, se pueden construir los modelos teniendo en cuenta algunos puntos de cambio en común para obtener un ajuste óptimo. 
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=1]{cdnpm10vspm25}
+\end{center}
+\centering
+\caption{Curvas de nivel para los contaminantes $PM_{10}$ y $PM_{2.5}$. }
+\label{curv_niv_pm10_pm25}
+\end{figure}
