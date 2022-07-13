@@ -47,7 +47,6 @@ Maestría en Matemáticas Aplicadas
  \end{titlepage}
 \newpage
 
-\newpage
 
 \begin{titlepage}
 \centering
@@ -77,13 +76,19 @@ Maestría en Matemáticas Aplicadas
  \end{titlepage}
 
 
+\newpage
+
+\include{codigofuente/dedicatoria}
+
 \include{codigofuente/agradecimientos}
 
 \renewcommand{\contentsname}{Contenido}
+\addcontentsline{toc}{chapter}{Introducción}
+\addcontentsline{toc}{chapter}{Agradecimientos}
 \tableofcontents
 \listoffigures
 \listoftables
-
+\addcontentsline{toc}{chapter}{Bibliografía}
 \mainmatter
 \include{codigofuente/introduccion}
 \include{codigofuente/antecedentes}

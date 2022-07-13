@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.19)  8 JUN 2022 16:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.19)  13 JUL 2022 12:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -588,10 +588,11 @@ LaTeX Warning: Unused global option(s):
 (TESIS.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
- (codigofuente/agradecimientos.aux) (codigofuente/introduccion.aux)
-(codigofuente/antecedentes.aux) (codigofuente/copulas.aux)
-(codigofuente/capitulo1.aux) (codigofuente/diagnosticoconvergencia.aux)
-(codigofuente/modelo.biv.aux) (codigofuente/conclusiones.aux))
+ (codigofuente/dedicatoria.aux) (codigofuente/agradecimientos.aux)
+(codigofuente/introduccion.aux) (codigofuente/antecedentes.aux)
+(codigofuente/copulas.aux) (codigofuente/capitulo1.aux)
+(codigofuente/diagnosticoconvergencia.aux) (codigofuente/modelo.biv.aux)
+(codigofuente/conclusiones.aux))
 \openout1 = `TESIS.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -693,7 +694,7 @@ LaTeX Info: Redefining \nameref on input line 22.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<USAlogo.jpg, id=147, 838.13126pt x 464.73625pt>
+<USAlogo.jpg, id=158, 838.13126pt x 464.73625pt>
 File: USAlogo.jpg Graphic file (type jpg)
 <use USAlogo.jpg>
 Package pdftex.def Info: USAlogo.jpg  used on input line 29.
@@ -711,40 +712,74 @@ jpg>] [2
 ]
 File: USAlogo.jpg Graphic file (type jpg)
 <use USAlogo.jpg>
-Package pdftex.def Info: USAlogo.jpg  used on input line 55.
+Package pdftex.def Info: USAlogo.jpg  used on input line 54.
 (pdftex.def)             Requested size: 192.76613pt x 106.88708pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.77  \end{titlepage}
+l.76  \end{titlepage}
                       [1]
+\openout2 = `codigofuente/dedicatoria.aux'.
+
+ (codigofuente/dedicatoria.tex)
+\openout2 = `codigofuente/agradecimientos.aux'08pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.76  \end{titlepage}
+                      [1]
+\openout2 = `codigofuente/dedicatoria.aux'.
+
+ (codigofuente/dedicatoria.tex)
 \openout2 = `codigofuente/agradecimientos.aux'.
 
- (codigofuente/agradecimientos.tex)
+
+(codigofuente/agradecimientos.tex)
 pdfTeX warning (ext4): destination with the same identifier (name{page.II}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.80 \include{codigofuente/agradecimientos}
+l.83 \include{codigofuente/agradecimientos}
                                             [2
+
+
+
 
 
 ] (TESIS.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
 
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
+(Font)              using `OT1/cmr/bx/n' instead on input line 2.
+
+
+Package spanish Warning: Replacing `OT1/cmr/bx/sc' by 
+(spanish)                faked small caps on input line 2.
+
+
+Package spanish Warning: Replacing `OT1/cmr/bx/sc' by 
+(spanish)                faked small caps on input line 3.
+
+
+Package spanish Warning: Replacing `OT1/cmr/bx/sc' by 
+(spanish)                faked small caps on input line 4.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 3.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 6.
 
 
 (C:\Program Files\MiKTeX\tex/latex/base\ulasy.fd
@@ -757,8 +792,8 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 \tf@toc=\write4
 \openout4 = `TESIS.toc'.
 
-LaTeX Info: Redefining \. on input line 84.
-LaTeX Info: Redefining \% on input line 84.
+LaTeX Info: Redefining \. on input line 89.
+LaTeX Info: Redefining \% on input line 89.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -787,8 +822,8 @@ LaTeX Info: Redefining \% on input line 1.
  [6
 
 ]
-LaTeX Info: Redefining \. on input line 87.
-LaTeX Info: Redefining \% on input line 87.
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -804,15 +839,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 \openout2 = `codigofuente/introduccion.aux'.
 
- (codigofuente/introduccion.tex) [1
+ (codigofuente/introduccion.tex [1
 
 
-]
+])
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[2]
 \openout2 = `codigofuente/antecedentes.aux'.
 
  (codigofuente/antecedentes.tex
 Cap\'{\i }tulo 1.
-[2
+[3
 
 
 
@@ -829,33 +876,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 81.
-LaTeX Info: Redefining \% on input line 81.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [4]
-LaTeX Info: Redefining \. on input line 114.
-LaTeX Info: Redefining \% on input line 114.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+Underfull \vbox (badness 10000) has occurred while \so make \topmargin smaller to compensate:
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5]
+LaTeX Info: Redefining \. on input line 112.
+LaTeX Info: Redefining \% on input line 112.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6]
 Underfull \vbox (badness 1552) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 153.
@@ -869,7 +907,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[6]
+[7]
 LaTeX Info: Redefining \. on input line 175.
 LaTeX Info: Redefining \% on input line 175.
 
@@ -881,7 +919,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7]
+[8]
 LaTeX Info: Redefining \. on input line 210.
 LaTeX Info: Redefining \% on input line 210.
 
@@ -893,9 +931,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8])
-LaTeX Info: Redefining \. on input line 89.
-LaTeX Info: Redefining \% on input line 89.
+[9])
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -905,7 +943,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9]
+[10]
 \openout2 = `codigofuente/copulas.aux'.
 
  (codigofuente/copulas.tex
@@ -923,7 +961,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10
+[11
 
 
 
@@ -939,15 +977,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11]
+[12]
 Overfull \hbox (84.73297pt too wide) detected at line 123
  $\OML/cmm/m/it/12 \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t[]; t[]\OT1/cmr/m/n/12 )
  = [] [] [][] [][] []$  
  []
 
 )
-LaTeX Info: Redefining \. on input line 90.
-LaTeX Info: Redefining \% on input line 90.
+LaTeX Info: Redefining \. on input line 95.
+LaTeX Info: Redefining \% on input line 95.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -957,7 +995,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12]
+[13]
 \openout2 = `codigofuente/capitulo1.aux'.
 
  (codigofuente/capitulo1.tex
@@ -1038,17 +1076,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 8.
 
-[13
+[14
 
 
 
 
 ]
-<cabello.png, id=467, 294.34969pt x 228.10219pt>
+<cabello.png, id=492, 294.34969pt x 228.10219pt>
 File: cabello.png Graphic file (type png)
 <use cabello.png>
 Package pdftex.def Info: cabello.png  used on input line 27.
-(pdftex.def)             Requested size: 235.48006pt x 182.48198pt.
+(pdftex.def)             Requested size: 353.21783pt x 273.72122pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1062,8 +1100,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 43.
 
-LaTeX Info: Redefining \. on input line 45.
-LaTeX Info: Redefining \% on input line 45.
+LaTeX Info: Redefining \. on input line 44.
+LaTeX Info: Redefining \% on input line 44.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1072,35 +1110,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14 <./cabello.png>]
-LaTeX Info: Redefining \. on input line 71.
-LaTeX Info: Redefining \% on input line 71.
+[15 <./cabello.png>]
+LaTeX Info: Redefining \. on input line 69.
+LaTeX Info: Redefining \% on input line 69.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[15]
-<seriesdetiempo.jpg, id=489, 280.1667pt x 303.2931pt>
-File: seriesdetiempo.jpg Graphic file (type jpg)
-<use seriesdetiempo.jpg>
-Package pdftex.def Info: seriesdetiempo.jpg  used on input line 79.
-(pdftex.def)             Requested size: 420.24902pt x 454.93854pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<mediasacumuladas.jpg, id=492, 291.2481pt x 303.2931pt>
-File: mediasacumuladas.jpg Graphic file (type jpg)
-<use mediasacumuladas.jpg>
-Package pdftex.def Info: mediasacumuladas.jpg  used on input line 111.
-(pdftex.def)             Requested size: 436.87106pt x 454.93854pt.
-LaTeX Info: Redefining \. on input line 123.
-LaTeX Info: Redefining \% on input line 123.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1110,6 +1123,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [16]
+<seriesdetiempo.jpg, id=513, 280.1667pt x 303.2931pt>
+File: seriesdetiempo.jpg Graphic file (type jpg)
+<use seriesdetiempo.jpg>
+Package pdftex.def Info: seriesdetiempo.jpg  used on input line 79.
+(pdftex.def)             Requested size: 420.24902pt x 454.93854pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<mediasacumuladas.jpg, id=516, 291.2481pt x 303.2931pt>
+File: mediasacumuladas.jpg Graphic file (type jpg)
+<use mediasacumuladas.jpg>
+Package pdftex.def Info: mediasacumuladas.jpg  used on input line 111.
+(pdftex.def)             Requested size: 436.87106pt x 454.93854pt.
+LaTeX Info: Redefining \. on input line 120.
+LaTeX Info: Redefining \% on input line 120.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17]
 LaTeX Info: Redefining \. on input line 123.
 LaTeX Info: Redefining \% on input line 123.
 
@@ -1121,7 +1159,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17 <./seriesdetiempo.jpg>]
+[18 <./seriesdetiempo.jpg>]
 LaTeX Info: Redefining \. on input line 129.
 LaTeX Info: Redefining \% on input line 129.
 
@@ -1133,8 +1171,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[18 <./mediasacumuladas.jpg>]
-<RIESGOSPC.jpg, id=506, 290.5254pt x 463.9734pt>
+[19 <./mediasacumuladas.jpg>]
+<RIESGOSPC.jpg, id=530, 290.5254pt x 463.9734pt>
 File: RIESGOSPC.jpg Graphic file (type jpg)
 <use RIESGOSPC.jpg>
 Package pdftex.def Info: RIESGOSPC.jpg  used on input line 159.
@@ -1143,7 +1181,7 @@ Package pdftex.def Info: RIESGOSPC.jpg  used on input line 159.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<MEANSSPC.jpg, id=508, 290.5254pt x 463.9734pt>
+<MEANSSPC.jpg, id=532, 290.5254pt x 463.9734pt>
 File: MEANSSPC.jpg Graphic file (type jpg)
 <use MEANSSPC.jpg>
 Package pdftex.def Info: MEANSSPC.jpg  used on input line 173.
@@ -1161,9 +1199,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[19]
+[20]
 
-LaTeX Warning: Text page 20 contains only floats.
+LaTeX Warning: Text page 21 contains only floats.
 
 
 Underfull \vbox (badness 3260) has occurred while \output is active []
@@ -1179,7 +1217,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[20 <./RIESGOSPC.jpg>]
+[21 <./RIESGOSPC.jpg>]
 LaTeX Info: Redefining \. on input line 198.
 LaTeX Info: Redefining \% on input line 198.
 
@@ -1191,8 +1229,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[21 <./MEANSSPC.jpg>]
-<MEANSUPC.jpg, id=524, 290.5254pt x 463.9734pt>
+[22 <./MEANSSPC.jpg>]
+<MEANSUPC.jpg, id=548, 290.5254pt x 463.9734pt>
 File: MEANSUPC.jpg Graphic file (type jpg)
 <use MEANSUPC.jpg>
 Package pdftex.def Info: MEANSUPC.jpg  used on input line 201.
@@ -1208,8 +1246,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[22 <./MEANSUPC.jpg>]
-<RIESGOUPC.jpg, id=530, 290.5254pt x 463.9734pt>
+[23 <./MEANSUPC.jpg>]
+<RIESGOUPC.jpg, id=554, 290.5254pt x 463.9734pt>
 File: RIESGOUPC.jpg Graphic file (type jpg)
 <use RIESGOUPC.jpg>
 Package pdftex.def Info: RIESGOUPC.jpg  used on input line 245.
@@ -1225,9 +1263,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[23]
+[24]
 
-LaTeX Warning: Text page 24 contains only floats.
+LaTeX Warning: Text page 25 contains only floats.
 
 
 Underfull \vbox (badness 3260) has occurred while \output is active []
@@ -1243,8 +1281,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24 <./RIESGOUPC.jpg>]
-<MEANSDPC.jpg, id=544, 268.3626pt x 312.2064pt>
+[25 <./RIESGOUPC.jpg>]
+<MEANSDPC.jpg, id=568, 268.3626pt x 312.2064pt>
 File: MEANSDPC.jpg Graphic file (type jpg)
 <use MEANSDPC.jpg>
 Package pdftex.def Info: MEANSDPC.jpg  used on input line 298.
@@ -1263,8 +1301,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[25]
-<RATEDPC.jpg, id=555, 378.6948pt x 463.0098pt>
+[26]
+<RATEDPC.jpg, id=579, 378.6948pt x 463.0098pt>
 File: RATEDPC.jpg Graphic file (type jpg)
 <use RATEDPC.jpg>
 Package pdftex.def Info: RATEDPC.jpg  used on input line 310.
@@ -1283,7 +1321,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26 <./MEANSDPC.jpg>]
+[27 <./MEANSDPC.jpg>]
 LaTeX Info: Redefining \. on input line 319.
 LaTeX Info: Redefining \% on input line 319.
 
@@ -1295,7 +1333,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[27 <./RATEDPC.jpg>]
+[28 <./RATEDPC.jpg>]
 LaTeX Info: Redefining \. on input line 344.
 LaTeX Info: Redefining \% on input line 344.
 
@@ -1307,9 +1345,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[28])
-LaTeX Info: Redefining \. on input line 91.
-LaTeX Info: Redefining \% on input line 91.
+[29])
+LaTeX Info: Redefining \. on input line 96.
+LaTeX Info: Redefining \% on input line 96.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1319,7 +1357,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[29]
+[30]
 \openout2 = `codigofuente/diagnosticoconvergencia.aux'.
 
  (codigofuente/diagnosticoconvergencia.tex
@@ -1348,7 +1386,7 @@ Overfull \hbox (4.16318pt too wide) in paragraph at lines 98--98
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[30
+[31
 
 
 
@@ -1367,7 +1405,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[31]
+[32]
 Overfull \hbox (4.16318pt too wide) in paragraph at lines 150--150
 \OT1/cmr/m/n/12 Estacionalidad|  
  []
@@ -1406,7 +1444,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[32]
+[33]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1427,20 +1465,8 @@ Overfull \hbox (4.16318pt too wide) in paragraph at lines 556--556
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
-LaTeX Info: Redefining \. on input line 92.
-LaTeX Info: Redefining \% on input line 92.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[33]
-LaTeX Info: Redefining \. on input line 92.
-LaTeX Info: Redefining \% on input line 92.
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1451,8 +1477,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [34]
-LaTeX Info: Redefining \. on input line 92.
-LaTeX Info: Redefining \% on input line 92.
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1463,8 +1489,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [35]
-LaTeX Info: Redefining \. on input line 92.
-LaTeX Info: Redefining \% on input line 92.
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1475,8 +1501,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [36]
-LaTeX Info: Redefining \. on input line 92.
-LaTeX Info: Redefining \% on input line 92.
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1487,8 +1513,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [37]
-LaTeX Info: Redefining \. on input line 92.
-LaTeX Info: Redefining \% on input line 92.
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1499,6 +1525,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [38]
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[39]
 \openout2 = `codigofuente/modelo.biv.aux'.
 
  (codigofuente/modelo.biv.tex
@@ -1531,7 +1569,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[39
+[40
 
 
 
@@ -1551,7 +1589,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[40]
+[41]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 44.
@@ -1593,60 +1631,16 @@ Overfull \hbox (71.79358pt too wide) in paragraph at lines 51--63
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 73.
-LaTeX Info: Redefining \% on input line 73.
+<cdnpm10vs03.jpg, id=668, 378.6948pt x 385.44pt>
+File: cdnpm10vs03.jpg Graphic file (type jpg)
+<use cdnpm10vs03.jpg>
+Package pdftex.def Info: cdnpm10vs03.jpg  used on input line 72.
+(pdftex.def)             Requested size: 378.69386pt x 385.43906pt.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[41]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 74.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\theta' on input line 74.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 74.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 74.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 74.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 74.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 74.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 74.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 74.
-
-
-Overfull \hbox (43.7935pt too wide) in paragraph at lines 80--93
- [][] 
- []
-
-LaTeX Info: Redefining \. on input line 96.
-LaTeX Info: Redefining \% on input line 96.
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1658,48 +1652,120 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [42]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 100.
+(hyperref)                removing `math shift' on input line 83.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\theta' on input line 100.
+(hyperref)                removing `\theta' on input line 83.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 100.
+(hyperref)                removing `math shift' on input line 83.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 100.
+(hyperref)                removing `math shift' on input line 83.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 100.
+(hyperref)                removing `subscript' on input line 83.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 100.
+(hyperref)                removing `math shift' on input line 83.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 100.
+(hyperref)                removing `math shift' on input line 83.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 100.
+(hyperref)                removing `subscript' on input line 83.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 100.
+(hyperref)                removing `math shift' on input line 83.
 
 
-Overfull \hbox (25.51591pt too wide) in paragraph at lines 106--120
+Overfull \hbox (54.16876pt too wide) in paragraph at lines 89--102
  [][] 
  []
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 105.
+LaTeX Info: Redefining \% on input line 105.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[43 <./cdnpm10vs03.jpg>]
+<cdn_ozpm25.jpg, id=682, 378.6948pt x 409.53pt>
+File: cdn_ozpm25.jpg Graphic file (type jpg)
+<use cdn_ozpm25.jpg>
+Package pdftex.def Info: cdn_ozpm25.jpg  used on input line 112.
+(pdftex.def)             Requested size: 378.69386pt x 409.52899pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 120.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\theta' on input line 120.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 120.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 120.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 120.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 120.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 120.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 120.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 120.
+
+
+Overfull \hbox (5.47458pt too wide) in paragraph at lines 126--140
+ [][] 
+ []
+
+<cdnpm10vspm25.jpg, id=687, 378.6948pt x 402.7848pt>
+File: cdnpm10vspm25.jpg Graphic file (type jpg)
+<use cdnpm10vspm25.jpg>
+Package pdftex.def Info: cdnpm10vspm25.jpg  used on input line 149.
+(pdftex.def)             Requested size: 378.69386pt x 402.78381pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 )
-LaTeX Info: Redefining \. on input line 93.
-LaTeX Info: Redefining \% on input line 93.
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1709,19 +1775,43 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[43]
+[44]
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[45 <./cdn_ozpm25.jpg>]
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[46 <./cdnpm10vspm25.jpg>]
 \openout2 = `codigofuente/conclusiones.aux'.
 
  (codigofuente/conclusiones.tex
 Cap\'{\i }tulo 5.
-[44
+[47
 
 
 
 
 ])
-LaTeX Info: Redefining \. on input line 94.
-LaTeX Info: Redefining \% on input line 94.
+LaTeX Info: Redefining \. on input line 99.
+LaTeX Info: Redefining \% on input line 99.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1731,7 +1821,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[45] (codigofuente/bibliografia.tex [46
+[48] (codigofuente/bibliografia.tex [49
 
 
 
@@ -1742,8 +1832,8 @@ e car-lo methods.
  []
 
 )
-LaTeX Info: Redefining \. on input line 97.
-LaTeX Info: Redefining \% on input line 97.
+LaTeX Info: Redefining \. on input line 102.
+LaTeX Info: Redefining \% on input line 102.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1753,46 +1843,62 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[47] (TESIS.aux
+[50] (TESIS.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
- (codigofuente/agradecimientos.aux)
-(codigofuente/introduccion.aux) (codigofuente/antecedentes.aux)
-(codigofuente/copulas.aux) (codigofuente/capitulo1.aux)
-(codigofuente/diagnosticoconvergencia.aux) (codigofuente/modelo.biv.aux)
-(codigofuente/conclusiones.aux))
+ (codigofuente/dedicatoria.aux)
+(codigofuente/agradecimientos.aux) (codigofuente/introduccion.aux)
+(codigofuente/antecedentes.aux) (codigofuente/copulas.aux)
+(codigofuente/capitulo1.aux) (codigofuente/diagnosticoconvergencia.aux)
+(codigofuente/modelo.biv.aux) (codigofuente/conclusiones.aux))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package rerunfilecheck Info: File `TESIS.out' has not changed.
-(rerunfilecheck)             Checksum: 47508347EF661C11A7D26C1F7B650E49;8107.
+(rerunfilecheck)             Checksum: 7F33EBBB98660D56A2E244C2848083B9;8443.
  ) 
 Here is how much of TeX's memory you used:
- 15637 strings out of 478659
- 262043 string characters out of 2855771
- 752608 words of memory out of 3000000
- 33226 multiletter control sequences out of 15000+600000
+ 15715 strings out of 478659
+ 264384 string characters out of 2855771
+ 752626 words of memory out of 3000000
+ 33291 multiletter control sequences out of 15000+600000
  421321 words of font info for 101 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 113i,14n,109p,1070b,683s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,15n,109p,1614b,683s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\Michael\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tc
 rm1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
-:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program 
-Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
-i6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Pr
-ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
-8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/
-Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/font
-s/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb>
-Output written on TESIS.pdf (57 pages, 1837994 bytes).
+:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Fil
+es/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
+12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Pr
+ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+r6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pro
+gram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/font
+s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmtt12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm1
+0.pfb>
+Output written on TESIS.pdf (60 pages, 2877610 bytes).
 PDF statistics:
- 805 PDF objects out of 1000 (max. 8388607)
- 188 named destinations out of 1000 (max. 500000)
- 339 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 853 PDF objects out of 1000 (max. 8388607)
+ 194 named destinations out of 1000 (max. 500000)
+ 378 words of extra memory for PDF output out of 10000 (max. 10000000)
+
+0.pfb><C:/Program Files
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/font
+s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmtt12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm1
+0.pfb>
+Output written on TESIS.pdf (60 pages, 2861874 bytes).
+PDF statistics:
+ 735 PDF objects out of 1000 (max. 8388607)
+ 194 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
