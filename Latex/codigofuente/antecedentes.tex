@@ -1,18 +1,30 @@
 \chapter{Preliminares}
 
 \section{Inferencia bayesiana}
-En el presente trabajo de grado, son necesarios algunos resultados importantes del curso Inferencia Bayesiana, es por eso que a continuación se presentan algunas definiciones y teoremas que son de gran utilidad para poder encontrar los diferentes parámetros que modelan los diferentes contaminantes y su respectiva correlación. 
+En el presente trabajo de grado, son necesarios algunos resultados importantes del curso Inferencia Bayesiana, es por eso que a continuación se presentan algunas definiciones y teoremas que son de gran utilidad para poder encontrar los diferentes parámetros que modelan los contaminantes y su respectiva correlación.\\
 
 
 
 %Se llama inferencia bayesiana a esa parte de la estadística que se encarga de utilizar la información conocida, los datos observados, la experiencia, la genética, etc., para poder hablar del futuro haciendo uso de la probabilidad. 
 %Esto lo hace utilizando el teorema de bayes, el cual permite actualizar la probabilidad a medida que se obtienen nuevos datos. 
 
-El análisis de datos Bayesiano es el nombre que se le da a cada uno de los métodos prácticos que se construyen para hacer inferencias a partir de datos conocidos, utilizando modelos de probabilidad \cite{infe_bayes}. Gracias a la experiencia o al conocimiento previo sobre algún tema particular, se pueden construir modelos que permiten realizar inferencias y tomar desiciones futuras, siempre enfocados en la mejora continua de los procesos. 
+\st{El an\'alisis de datos Bayesiano es el nombre que se le da a cada uno de los m\'etodos pr\'acticos que se construyen para hacer inferencias a partir de datos conocidos, utilizando modelos de probabilidad} \cite{infe_bayes}.
+\begin{comment} 
+Rehacer la frase, está bastante imprecisa
+\end{comment}
+Gracias a la experiencia o al conocimiento previo sobre \st{alg\'un tema particular}, 
+\begin{comment} 
+	Se vuelve difícil de entender cuando dices que sobre un tema particular.
+\end{comment}
+se pueden construir modelos que permiten realizar inferencias y tomar decisiones futuras, siempre enfocados en \st{la mejora continua de los procesos.}
+\begin{comment} 
+	Qué procesos?. No es clara para nada tu definición.
+\end{comment}
 
-A este conocimiento previo se le denomina distribución a priori $P(\theta)$, cuya definición es una representación por medio de distribuciones de frecuencia que dependen de los datos ya conocidos. 
 
-En el presente trabajo de grado, el interés está en encontrar conclusiones sobre la relación que tienen, dos a dos, tres contaminantes elegidos y de los cuales se tiene una información previa que en este caso será la experiencia necesaria para hacer uso de la teoria Bayesiana y enfocar el objetivo principal que será identificar la correlación entre dos procesos estocásticos. Esto se podrá hacer, siempre y cuando se establezca un modelo para cada uno de los tres contaminantes y también para los pares, para hacerlo, se utiliza la siguiente notación, $\theta$ denota cantidades de vectores no observables o parámetros poblacionales de interés y  $X$ los datos observados o conocidos con lo cuales se construirá el modelo, para este caso, el número de excedencias de los tres contaminantes durante los tres años analizados. 
+A este conocimiento previo se le denomina distribución a priori $P(\theta)$, cuya definición es una representación por medio de distribuciones que dependen de los datos ya conocidos. \\
+
+En el presente trabajo de grado, el interés está en encontrar conclusiones sobre la relación que tienen, dos a dos, de tres contaminantes elegidos y de los cuales se tiene una información previa que en este caso será la experiencia necesaria para hacer uso de la teoria Bayesiana y enfocar el objetivo principal que será identificar la correlación entre dos procesos estocásticos. Esto se podrá hacer, siempre y cuando se establezca un modelo para cada uno de los tres contaminantes y también para los pares, para hacerlo, se utiliza la siguiente notación, $\theta$ denota cantidades de vectores no observables o parámetros poblacionales de interés y  $X$ los datos observados o conocidos con lo cuales se construirá el modelo, para este caso, el número de excedencias de alguno de los tres contaminantes durante los tres años analizados. \\
 
 En este sentido, la inferencia bayesiana se encargará de realizar conclusiones estadísticas sobre el parámetro $\theta$ a través de la probabilidad condicional, lo cual se escribe simplemente como $P(\theta | X$) \cite{infe_bayes}. En adelante, la expresión $p(\cdot|\cdot)$
 denota una densidad de probabilidad condicional cuyos argumentos se podrán inferir del contexto  

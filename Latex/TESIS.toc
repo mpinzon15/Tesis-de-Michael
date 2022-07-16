@@ -1,40 +1,40 @@
-\babel@toc {spanish}{}\relax 
-\contentsline {chapter}{Introducción}{\es@scroman {iii}}{chapter*.1}%
-\contentsline {chapter}{Agradecimientos}{\es@scroman {iii}}{chapter*.1}%
-\contentsline {chapter}{Bibliografía}{\es@scroman {vii}}{chapter*.4}%
-\contentsline {chapter}{\numberline {1}Preliminares}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Inferencia bayesiana}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Teorema de Bayes}{4}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Método Monte Carlo vía Cadenas de Markov (MCMC)[Jiménez (2015)]}{6}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Algoritmo de Metropolis Hastings}{6}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Muestrador de Gibbs}{7}{subsection.1.3.2}%
-\contentsline {section}{\numberline {1.4}Algunos diagnósticos de convergencia para los parámetros estimados}{8}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Método Geweke [Geweke (1992)]}{8}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Método Heidelberger-Welch}{8}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Método Gelman and Rubin}{9}{subsection.1.4.3}%
-\contentsline {subsection}{\numberline {1.4.4}Método Raftery and Lewis}{10}{subsection.1.4.4}%
-\contentsline {section}{\numberline {1.5}Funciones cópula}{11}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Definición de función Cópula[Nelsen (2006) \cite {nelsen}]}{11}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Cópula Farlie-Gumbel-Morgenstern (FGM)}{12}{section.1.7}%
-\contentsline {chapter}{\numberline {2}Modelos univariados para los contaminantes $PM_{10}, PM_{2.5}$ y $O_3$}{14}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Descripción de los datos}{14}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Material particulado de $10\mu m$ y $2.5\mu m$ $(PM_{10})$ y $(PM_{2.5})$ respectivamente.}{14}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Ozono ($O_3$)}{16}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Reglamentación}{16}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Datos de los tres contaminantes:}{16}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Sin puntos de cambio}{19}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Un punto de cambio}{22}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Dos puntos de cambio:}{26}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Política pública:}{29}{section.2.7}%
-\contentsline {chapter}{\numberline {3}Diagnóstico de convergencias}{31}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Sin puntos de cambio}{31}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Un punto de cambio}{31}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Dos puntos de cambio}{33}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Modelos univariados para los pares de los contaminantes $PM_{10}, PM_{2.5}$ y $O_3$}{40}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Correlación de dos procesos estocásticos}{40}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Correlación, $\theta $, entre los contaminantes $PM_{10}$ y $O_3$ }{42}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Correlación, $\theta $, entre los contaminantes $PM_{2.5}$ y $O_3$ }{43}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Correlación, $\theta $, entre los contaminantes $PM_{2.5}$ y $PM_{10}$ }{44}{subsection.4.1.3}%
-\contentsline {chapter}{\numberline {5}Conclusiones y consideraciones}{47}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Conclusiones}{47}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Consideraciones}{48}{section.5.2}%
+\babel@toc {spanish}{}
+\contentsline {chapter}{Introducci\IeC {\'o}n}{\es@scroman {iii}}{chapter*.1}
+\contentsline {chapter}{Agradecimientos}{\es@scroman {iii}}{chapter*.1}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{\es@scroman {vii}}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Preliminares}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Inferencia bayesiana}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Teorema de Bayes}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}M\IeC {\'e}todo Monte Carlo v\IeC {\'\i }a Cadenas de Markov (MCMC)[Jim\IeC {\'e}nez (2015)]}{6}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Algoritmo de Metropolis Hastings}{6}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Muestrador de Gibbs}{7}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.4}Algunos diagn\IeC {\'o}sticos de convergencia para los par\IeC {\'a}metros estimados}{8}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}M\IeC {\'e}todo Geweke [Geweke (1992)]}{8}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}M\IeC {\'e}todo Heidelberger-Welch}{8}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}M\IeC {\'e}todo Gelman and Rubin}{9}{subsection.1.4.3}
+\contentsline {subsection}{\numberline {1.4.4}M\IeC {\'e}todo Raftery and Lewis}{10}{subsection.1.4.4}
+\contentsline {section}{\numberline {1.5}Funciones c\IeC {\'o}pula}{11}{section.1.5}
+\contentsline {section}{\numberline {1.6}Definici\IeC {\'o}n de funci\IeC {\'o}n C\IeC {\'o}pula[Nelsen (2006) \cite {nelsen}]}{11}{section.1.6}
+\contentsline {section}{\numberline {1.7}C\IeC {\'o}pula Farlie-Gumbel-Morgenstern (FGM)}{12}{section.1.7}
+\contentsline {chapter}{\numberline {2}Modelos univariados para los contaminantes $PM_{10}, PM_{2.5}$ y $O_3$}{14}{chapter.2}
+\contentsline {section}{\numberline {2.1}Descripci\IeC {\'o}n de los datos}{14}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Material particulado de $10\mu m$ y $2.5\mu m$ $(PM_{10})$ y $(PM_{2.5})$ respectivamente.}{14}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Ozono ($O_3$)}{16}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Reglamentaci\IeC {\'o}n}{16}{section.2.2}
+\contentsline {section}{\numberline {2.3}Datos de los tres contaminantes:}{16}{section.2.3}
+\contentsline {section}{\numberline {2.4}Sin puntos de cambio}{19}{section.2.4}
+\contentsline {section}{\numberline {2.5}Un punto de cambio}{22}{section.2.5}
+\contentsline {section}{\numberline {2.6}Dos puntos de cambio:}{26}{section.2.6}
+\contentsline {section}{\numberline {2.7}Pol\IeC {\'\i }tica p\IeC {\'u}blica:}{29}{section.2.7}
+\contentsline {chapter}{\numberline {3}Diagn\IeC {\'o}stico de convergencias}{31}{chapter.3}
+\contentsline {section}{\numberline {3.1}Sin puntos de cambio}{31}{section.3.1}
+\contentsline {section}{\numberline {3.2}Un punto de cambio}{31}{section.3.2}
+\contentsline {section}{\numberline {3.3}Dos puntos de cambio}{33}{section.3.3}
+\contentsline {chapter}{\numberline {4}Modelos univariados para los pares de los contaminantes $PM_{10}, PM_{2.5}$ y $O_3$}{40}{chapter.4}
+\contentsline {section}{\numberline {4.1}Correlaci\IeC {\'o}n de dos procesos estoc\IeC {\'a}sticos}{40}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Correlaci\IeC {\'o}n, $\theta $, entre los contaminantes $PM_{10}$ y $O_3$ }{42}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Correlaci\IeC {\'o}n, $\theta $, entre los contaminantes $PM_{2.5}$ y $O_3$ }{43}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Correlaci\IeC {\'o}n, $\theta $, entre los contaminantes $PM_{2.5}$ y $PM_{10}$ }{44}{subsection.4.1.3}
+\contentsline {chapter}{\numberline {5}Conclusiones y consideraciones}{47}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclusiones}{47}{section.5.1}
+\contentsline {section}{\numberline {5.2}Consideraciones}{48}{section.5.2}
